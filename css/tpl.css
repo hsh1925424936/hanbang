@@ -1,0 +1,83 @@
+/* 产品中心的液相色谱系统样式 */
+.yxsp h2{
+    padding: 45px 0 68px 0;
+}
+.yxsp p{
+    letter-spacing: 2;
+}
+.yxsp .img{
+    width: 520px;
+    height: 320px;
+    margin:20px auto;
+    border:solid 1px #ccc;
+}
+.yxsp h4{
+    width: 100%;
+    color: red;
+    text-align: center;
+    margin:30px 0;
+}
+
+/* 汉邦资讯中的汉邦动态样式 */
+.hbdt .image{
+    width: 100%;
+    height: 300px;
+    background: #9E9EA4;
+    margin-bottom: 20px;
+}
+.hbdt .image img{
+    width: 100%;
+    height: 100%;
+}
+.hbdt ul.content li{
+    width: 100%;
+    height: 144px;
+    background: #F5F5F5;
+    padding: 10px;
+}
+.hbdt ul.content li:not(:nth-last-child(1)){
+    margin-bottom: 10px;
+}
+.hbdt ul.content li img{
+    float:left;
+    width: 192px;
+    height: 100%;
+    background: #ccc;
+}
+.hbdt ul.content li .cont{
+    float: left;
+    width: calc(100% - 192px);
+    height: 100%;
+    padding: 5px 10px;
+    color: #676767;
+    font-size: 14px;
+}
+.hbdt ul.content li .cont h3{
+    color:#000;
+    font-weight:normal;
+    font-size:18.72px;
+    margin-bottom: 10px;
+}
+.hbdt ul.content li .cont hr{
+    opacity: 0.3;
+    margin-top:10px;
+}
+.hbdt ul.content li .cont p{
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+    margin-top:10px;
+    box-sizing: content-box;
+}
+/* 行业动态的样式 */
+.hydt .image{
+    width: 100%;
+    height: 300px;
+    background: #9E9EA4;
+    margin-bottom: 20px;
+}
+.hydt .image img{
+    width: 100%;
+    height: 100%;
+}
