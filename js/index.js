@@ -4,7 +4,7 @@ $(function(){
         init:function(){
             this.events();
             // 初始化的时候选中产品中心
-            $('.nav-tab .coption').eq(2).click();
+            $('.nav-tab .coption').eq(0).click();
         },
         // 事件绑定
         events:function(){
@@ -16,9 +16,8 @@ $(function(){
                 // tpl命名规则都是前四位中文首字母，tab切换便于匹配到相应的模板
                 switch(name){
                     case '首页':
-                        commonData.mainLeftList = {
-                            
-                        };
+                        commonData.mainLeftList = {};
+                        self.renderHomePage();
                         break;
                     case '走进汉邦':
                         commonData.mainLeftList = {
@@ -30,6 +29,7 @@ $(function(){
                                 {name:'发展历程',tpl:'fzlc',selected:false,parent:'走进汉邦'},
                             ]
                         };
+                        self.renderMainLeftTab(commonData.mainLeftList);
                         break;
                     case '汉邦资讯':
                         commonData.mainLeftList = {
@@ -39,6 +39,7 @@ $(function(){
                                 {name:'行业动态',tpl:'hydt',selected:false,parent:'汉邦资讯'},
                             ]
                         };
+                        self.renderMainLeftTab(commonData.mainLeftList);
                         break;
                     case '解决方案':
                         commonData.mainLeftList = {
@@ -53,6 +54,7 @@ $(function(){
                                 {name:'联系我们',tpl:'lxwm',selected:false,parent:'联系我们'},
                             ]
                         }
+                        self.renderMainLeftTab(commonData.mainLeftList);
                         break; 
                     case '产品中心':
                         commonData.mainLeftList = {
@@ -67,9 +69,9 @@ $(function(){
                                 {name:'药材及配件',tpl:'ycpj',selected:false,parent:'产品中心'}
                             ]
                         };
+                        self.renderMainLeftTab(commonData.mainLeftList);
                         break;
                 }
-                self.renderMainLeftTab(commonData.mainLeftList);
             })
             // 页面中部左侧的tab切换事件
             $(document).on('click','.main-container .main-left li',function(event){
@@ -84,22 +86,46 @@ $(function(){
                 self.renderTpl(data);
             })
         },
+        // 首页:注意这里是将模板写到了index.html里，和下面的引入是一样的，供选择
+        renderHomePage:function(){
+            $('.main-container').html(Handlebars.compile($('#homePage').html()));
+            $(".slide-container").xmSlide({
+                // width:'100%',
+                height: 600,
+                responsiveWidth:710,
+                pagination: {
+                    effect: "fade"  //可换成"slide"
+                },
+                effect: {
+                    fade: {
+                        speed: 400
+                    }
+                },
+                play: {
+                    effect: "fade", //可换成"slide"
+                    interval: 4000,
+                    auto: true,
+                    pauseOnHover: true,
+                    restartDelay: 2500
+                }
+            });
+        },
         // 渲染页面中部左侧tab切换
         renderMainLeftTab:function(data){
             $.get('/template/main_left_tab.tpl',function(res){
-                $('.main-container .main-left').html('');
-                $('.main-container .main-right').html('');
-                $('.main-container .main-left').html(Handlebars.compile(res)(data));
+                $('.main-container').html('');
+                $('.main-container').append('<div class="main-cont"><div class="main-left"></div><div class="main-right"></div></div>');
+                $('.main-container .main-cont .main-left').html(Handlebars.compile(res)(data));
                 // 默认情况下，中间左侧tab选中第一个
-                $('.main-container .main-left ul li').eq(0).click();
+                $('.main-container .main-cont .main-left ul li').eq(0).click();
             })
         },
         // 中间左侧的tab切换相应右侧的模板
         renderTpl:function(data){
             var self = this;
             $.get('/template/'+data.tpl+'.tpl',function(res){
-                $('.main-container .main-right').html('');
-                $('.main-container .main-right').html(Handlebars.compile(res)(data));
+                $('.main-container .main-cont .main-right').html('');
+                $('.main-container .main-cont .main-right').html(Handlebars.compile(res)(data));
                 self.initHbdtPage(50,1);
             })
         },

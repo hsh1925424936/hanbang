@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>汉邦</title>
+    <title>汉邦官网</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/tpl.css">
     <link rel="stylesheet" href="./css/page.css">
+    <link rel="stylesheet" href="./css/slide.css">
 </head>
 <body>
     <nav class="nav-container">
         <div class="nav-content">
-            <div class="nav-logo"></div>
+            <div class="nav-logo">
+                <img src="./image/首页/head-logo.png" alt="">
+            </div>
+            <div class="search">
+                <i></i>
+                <span class="red">中</span>&ensp;|&ensp;<span>EN</span>
+            </div>
             <ul class="nav-tab">
                 <li class="coption selected">首页</li>
                 <li class="coption">走进汉邦</li>
@@ -20,17 +27,21 @@
                 <li class="coption">产品中心</li>
                 <li class="coption">解决方案</li>
                 <li class="coption">联系我们</li>
-                <li class="coption">搜索</li>
+                <!-- <li class="coption">搜索</li> -->
             </ul>
+            
         </div>
     </nav>
+
     <main class="main-container clearfix">
-        <div class="main-left"></div>
-        <div class="main-right"></div>
+        <div class="main-cont"></div>
     </main>
+
     <footer class="footer-container">
         <div class="footer-content">
-            <div class="footer-logo"></div>
+            <div class="footer-logo">
+                <img src="./image/首页/footer-logo.png" alt="">
+            </div>
             <div class="footer-tab">
                 <ul>
                     <li>
@@ -65,19 +76,71 @@
                 </ul>
             </div>
             <div class="footer-common">
-                <div class="footer-common-gz"></div>
+                <div class="footer-common-gz">
+                    <img src="./image/首页/公众号二维码.jpg" alt="">
+                </div>
                 <span>汉邦微信公众号</span>
             </div>
         </div>
         <div class="footer-ft">
             <p class="footer-p">
-                <span>Copyright&copy;2018江苏汉邦科技有限公司</span>
-                <span>浙ICP备05007700号</span>
+                    公司持有商标：Nucifera®  |  Dubhe®  |  Benetnach®  |  Megres®  |  Phecda®  |  Tauras®  |  Ceres®  |  Libra®  |  Kenase®  |  Hanbon®  |  Kenase®  |  Newstyle®  |  Hedera® | Bonpure®  
+            </p>
+            <p class="footer-p">
+                Copyright&copy;2018江苏汉邦科技有限公司&nbsp;浙ICP备05007700号
             </p>
         </div>
     </footer>
+
+    <script id="homePage" type="text/x-handlebars-template">
+        <div class="slide-container">
+            <div class="slide">
+                <img src="./image/首页/banenr.jpg">
+            </div>
+            <div class="slide">
+                <img src="./image/首页/首页-新闻图片-1.jpg">
+            </div>
+            <div class="slide">
+                <img src="./image/首页/bg-行业解决方案.jpg">
+            </div>
+        </div>
+        <div class="news cont">
+            <div class="title">
+                <h3>新闻资讯</h3>
+                <div class="more">
+                    <span>查看更多</span>
+                    <i class="prev"></i>
+                    <i class="next"></i>
+                </div>
+            </div>
+            <div class="content">
+                <div class="big">
+                    <img src="./image/首页/首页-新闻图片-1.jpg">
+                    <div class="brief">
+                        <p>
+                            <span>28</span>
+                            <span>03,2018</span>
+                        </p>
+                        <h4>CFDA最新发布！升级落地的数据保护制度助力国产创新药</h4>
+                    </div>
+                </div>
+                <div class="samll">
+                    <img src="./image/首页/首页-新闻图片-1.jpg">
+                    <div class="brief">
+                        <p>
+                            <span>28</span>
+                            <span>03,2018</span>
+                        </p>
+                        <h4>CFDA最新发布！升级落地的数据保护制度助力国产创新药</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
     <script src="./js/jquery3.3.1.min.js"></script>
     <script src="./js/handlebars.min.js"></script>
+    <script src="./js/slides.js"></script>
     <script src="./js/page.js"></script>
     <script src="./js/index.js"></script>
 </body>
