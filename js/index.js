@@ -3,15 +3,23 @@ $(function(){
         // 程序初始化调用
         init:function(){
             this.events();
-            // 初始化的时候选中产品中心
+            // 初始化的时候选中首页
             $('.nav-tab .coption').eq(0).click();
         },
         // 事件绑定
         events:function(){
             var self = this;
+            // nav导航hover事件
+            $('.nav-tab .coption').hover(function(event){
+                if(!$(this).hasClass('selected')){
+                    $(this).find('.nav-tab-list').show();
+                }
+            },function(event){
+                $(this).find('.nav-tab-list').hide()
+            })
             // nav导航的tab切换事件
             $(document).on('click','.nav-tab .coption',function(event){
-                var name = $(this).text();
+                var name = $(this).find('.title').text();
                 $(this).addClass('selected').siblings().removeClass('selected');
                 // tpl命名规则都是前四位中文首字母，tab切换便于匹配到相应的模板
                 switch(name){
@@ -103,6 +111,25 @@ $(function(){
                 },
                 play: {
                     effect: "fade", //可换成"slide"
+                    interval: 4000,
+                    auto: true,
+                    pauseOnHover: true,
+                    restartDelay: 2500
+                }
+            });
+            $(".product-slide").xmSlide({
+                height:354,
+                responsiveWidth:710,
+                pagination: {
+                    effect: "slide"  //可换成"slide"
+                },
+                effect: {
+                    fade: {
+                        speed: 400
+                    }
+                },
+                play: {
+                    effect: "slide", //可换成"slide"
                     interval: 4000,
                     auto: true,
                     pauseOnHover: true,

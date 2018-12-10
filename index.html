@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>汉邦官网</title>
+    <!-- 主页面css -->
     <link rel="stylesheet" href="./css/index.css">
+    <!-- 首页的css -->
+    <link rel="stylesheet" href="./css/homePage.css">
+    <!-- 各个模板的css -->
     <link rel="stylesheet" href="./css/tpl.css">
+    <!-- 分页的css -->
     <link rel="stylesheet" href="./css/page.css">
+    <!-- 轮播图的css -->
     <link rel="stylesheet" href="./css/slide.css">
 </head>
 <body>
@@ -21,13 +27,30 @@
                 <span class="red">中</span>&ensp;|&ensp;<span>EN</span>
             </div>
             <ul class="nav-tab">
-                <li class="coption selected">首页</li>
-                <li class="coption">走进汉邦</li>
-                <li class="coption">汉邦资讯</li>
-                <li class="coption">产品中心</li>
-                <li class="coption">解决方案</li>
-                <li class="coption">联系我们</li>
-                <!-- <li class="coption">搜索</li> -->
+                <li class="coption selected">
+                    <span class="title">首页</span>
+                    <div class="nav-tab-list"></div>
+                </li>
+                <li class="coption">
+                    <span class="title">走进汉邦</span>
+                    <div class="nav-tab-list"></div>
+                </li>
+                <li class="coption">
+                    <span class="title">汉邦资讯</span>
+                    <div class="nav-tab-list"></div>
+                </li>
+                <li class="coption">
+                    <span class="title">产品中心</span>
+                    <div class="nav-tab-list"></div>
+                </li>
+                <li class="coption">
+                    <span class="title">解决方案</span>
+                    <div class="nav-tab-list"></div>
+                </li>
+                <li class="coption">
+                    <span>联系我们</span>
+                    <div class="nav-tab-list"></div>
+                </li>
             </ul>
             
         </div>
@@ -91,21 +114,25 @@
             </p>
         </div>
     </footer>
-
-    <script id="homePage" type="text/x-handlebars-template">
+    <!-- nav下面的菜单模板 -->
+    <script id="navTabList" type="text/x-handlebars-template">
+    
+    </script>
+    <!-- 首页模板 -->
+    <script id="homePage" type="text/x-handlebars-template"> 
         <div class="slide-container">
             <div class="slide">
                 <img src="./image/首页/banenr.jpg">
             </div>
             <div class="slide">
-                <img src="./image/首页/首页-新闻图片-1.jpg">
+                <img src="./image/首页/banenr.jpg">
             </div>
             <div class="slide">
-                <img src="./image/首页/bg-行业解决方案.jpg">
+                <img src="./image/首页/banenr.jpg">
             </div>
         </div>
-        <div class="news cont">
-            <div class="title">
+        <div class="news home-cont center">
+            <div class="title clearfix">
                 <h3>新闻资讯</h3>
                 <div class="more">
                     <span>查看更多</span>
@@ -113,10 +140,10 @@
                     <i class="next"></i>
                 </div>
             </div>
-            <div class="content">
-                <div class="big">
+            <div class="content clearfix">
+                <div class="module big">
                     <img src="./image/首页/首页-新闻图片-1.jpg">
-                    <div class="brief">
+                    <div class="brief clearfix">
                         <p>
                             <span>28</span>
                             <span>03,2018</span>
@@ -124,15 +151,141 @@
                         <h4>CFDA最新发布！升级落地的数据保护制度助力国产创新药</h4>
                     </div>
                 </div>
-                <div class="samll">
-                    <img src="./image/首页/首页-新闻图片-1.jpg">
+                <div class="module small">
+                    <img src="./image/首页/首页-新闻图片-2.jpg">
                     <div class="brief">
                         <p>
                             <span>28</span>
                             <span>03,2018</span>
                         </p>
-                        <h4>CFDA最新发布！升级落地的数据保护制度助力国产创新药</h4>
+                        <h4>汉邦科技邀您参与生物药年度盛会，共话创新与仿制</h4>
                     </div>
+                </div>
+                <div class="module small">
+                    <img src="./image/首页/首页-新闻图片-3.jpg">
+                    <div class="brief">
+                        <p>
+                            <span>28</span>
+                            <span>03,2018</span>
+                        </p>
+                        <h4>感受工业发展脉搏——汉邦邀您参加2018阿赫玛展</h4>
+                    </div>
+                </div>
+                <div class="module small">
+                    <img src="./image/首页/首页-新闻图片-4.jpg">
+                    <div class="brief">
+                        <p>
+                            <span>28</span>
+                            <span>03,2018</span>
+                        </p>
+                        <h4>汉邦科技邀您参与生物药年度盛会，共话创新与仿制</h4>
+                    </div>
+                </div>
+                <div class="module small">
+                    <img src="./image/首页/首页-新闻图片-5.jpg">
+                    <div class="brief">
+                        <p>
+                            <span>28</span>
+                            <span>03,2018</span>
+                        </p>
+                        <h4>【相约成都】 2017中国生物制品年会邀请函</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-container">
+        <div class="product home-cont center">
+            <div class="title clearfix">
+                <h3>产品展示</h3>
+            </div>
+            <div class="product-slide">
+                <div class="slide clearfix">
+                    <div class="slide-img">
+                        <img src="./image/首页/Bio-Lab 实验室层析 系统.jpg">
+                        <p>Bio-Lab 实验室层析系统</p>
+                    </div>
+                    <div class="slide-img">
+                        <img src="./image/首页/工业制备高效液相色 谱系统.jpg">
+                        <p>工业制备高效液相色谱系统</p>
+                    </div>
+                    <div class="slide-img">
+                        <img src="./image/首页/实验室级超临界流体 色谱仪.jpg">
+                        <p>实验室级超临界流体色谱仪</p>
+                    </div>
+                    <div class="slide-img">
+                        <img src="./image/首页/Bio-TFF自动超滤U F-DF系统.jpg">
+                        <p>Bio-TFF自动超滤UF-DF系统</p>
+                    </div>
+                    <div class="slide-img">
+                        <img src="./image/首页/SCC 自动喷胶层析 柱.jpg">
+                        <p>SCC 自动喷胶层析柱</p>
+                    </div>
+                </div>
+                <div class="slide clearfix">
+                    <div class="slide-img">
+                        <img src="./image/首页/Bio-Lab 实验室层析 系统.jpg">
+                        <p>Bio-Lab 实验室层析系统</p>
+                    </div>
+                    <div class="slide-img">
+                        <img src="./image/首页/工业制备高效液相色 谱系统.jpg">
+                        <p>工业制备高效液相色谱系统</p>
+                    </div>
+                    <div class="slide-img">
+                        <img src="./image/首页/实验室级超临界流体 色谱仪.jpg">
+                        <p>实验室级超临界流体色谱仪</p>
+                    </div>
+                    <div class="slide-img">
+                        <img src="./image/首页/Bio-TFF自动超滤U F-DF系统.jpg">
+                        <p>Bio-TFF自动超滤UF-DF系统</p>
+                    </div>
+                    <div class="slide-img">
+                        <img src="./image/首页/SCC 自动喷胶层析 柱.jpg">
+                        <p>SCC 自动喷胶层析柱</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="case-container">
+            <div class="case home-cont center clearfix">
+                <div class="title clearfix">
+                    <h3>行业应用解决方案</h3>
+                </div>
+                <p class="introduce">FLUKO拥有上万个案例，为用户提供解决方案和混合设备。我们在生物、医药、食品、日化、精细化工、石油化工等几大行业数十个细分行业中，根据客户的工艺流程、物料配方设计高效、合理的方案；同时，我们还在熟悉用户工艺流程的基础上，根据FLUKO的产品优势帮助用户优化流程，得到更好的产品和更高的效率。</p>
+                <div class="content clearfix">
+                    <div class="cont">
+                        <img src="./image/首页/抗肿瘤注射液.jpg">
+                        <p>
+                            <span>抗肿瘤注射液</span><br>
+                            <i></i><br>
+                            <small>生物&医药</small>
+                        </p>
+                    </div>
+                    <div class="cont">
+                        <img src="./image/首页/食品配料.jpg">
+                        <p>
+                            <span>食品配料</span><br>
+                            <i></i><br>
+                            <small>食品</small>
+                        </p>
+                    </div>
+                    <div class="cont">
+                        <img src="./image/首页/清洁用品.jpg">
+                        <p>
+                            <span>清洁用品</span><br>
+                            <i></i><br>
+                            <small>日化</small>
+                        </p>
+                    </div>
+                    <div class="cont">
+                        <img src="./image/首页/抗肿瘤注射液-1.jpg">
+                        <p>
+                            <span>抗肿瘤注射液</span><br>
+                            <i></i><br>
+                            <small>生物&医药</small>
+                        </p>
+                    </div>
+                    
                 </div>
             </div>
         </div>

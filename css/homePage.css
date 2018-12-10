@@ -1,0 +1,224 @@
+/* 首页样式 */
+.slide-container{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+.slide-container .slide{
+    width: 100%;
+    height: 600px;
+}
+.slide-container .slide img{
+    width: 100%;
+    height: 100%;
+}
+.home-cont{
+    margin-top:56px;
+}
+.home-cont .title{
+    width: 100%;
+    height: 66px;
+}
+.home-cont .title h3{
+    float:left;
+    font-size: 30px;
+}
+.home-cont .title .more{
+    float:right;
+}
+.home-cont .title .more span{
+    font-size: 14px;
+    color:#666666;
+    margin-right: 8px;
+}
+.home-cont .title .more i{
+    display:inline-block;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    position: relative;
+    top:7px;
+}
+.home-cont .title .more i.prev{
+    background: url('../image/首页/上.jpg') no-repeat center center;
+}
+.home-cont .title .more i.prev:hover{
+    background: url('../image/首页/上-hover.jpg') no-repeat center center;
+}
+.home-cont .title .more i.next{
+    background: url('../image/首页/下.jpg') no-repeat center center;
+}
+.home-cont .title .more i.next:hover{
+    background: url('../image/首页/下-hover.jpg') no-repeat center center;
+}
+.news .content .big{
+    float: left;
+    width: 560px;
+}
+.news .content .big>img{
+    width: 100%;
+    height: 414px;
+}
+.news .content .big .brief{
+    width:100%;
+    height: 56px;
+    margin-top:8px;
+}
+.news .content .module .brief p{
+    float: left;
+    width: 50px;
+    height: 50px;
+    background: #7E7E7E;
+    text-align: center;
+}
+.news .content .module .brief p span:nth-of-type(1){
+    position: relative;
+    top:4px;
+    display:inline-block;
+    height: 24px;
+    line-height: 24px;
+    font-family: Arial-BoldMT;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+.news .content .module .brief p span:nth-of-type(2){
+    font-family: ArialMT;
+    font-size: 12px;
+    color: #FFFFFF;
+    line-height: 12px;
+}
+.news .content .module .brief h4{
+    width: calc(100% - 60px);
+    float: left;
+    margin-left: 10px;
+    font-size: 20px;
+    color: #333333;
+    letter-spacing: 0.57px;
+    /* word-break: break-all; */
+}
+
+.news .small{
+    float: left;
+    width: 300px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.news .small img{
+    width: 100%;
+    height: 168px;
+}
+.news .content .small .brief{
+    width:100%;
+    height: 50px;
+    margin-top:4px;
+}
+.news .content .small .brief h4{
+    font-family: PingFangSC-Semibold;
+    font-size: 16px;
+    color: #333333;
+    letter-spacing: 0.46px;
+} 
+
+.product-container{
+    width: 100%;
+    height: 420px;
+    margin-bottom: 56px;
+    background:url('../image/首页/bg-产品展示.jpg') no-repeat center center;
+}
+.product-slide{
+    width: 100%;
+    height: 354px;
+    position: relative;
+}
+.product-slide .slide{
+    width: 100%;
+    height: 100%;
+}
+.product-slide .slide .slide-img{
+    float: left;
+    width: 220px;
+    height: 300px;
+    background: #FFFFFF;
+    border: 1px solid #DCDCDC;
+}
+.product-slide .slide .slide-img:not(:nth-last-child(1)){
+    margin-right: 25px;
+}
+.product-slide .slide .slide-img>img{
+    width: 218px;
+    height: 203px;
+}
+.product-slide .slide .slide-img p{
+    width: 100%;
+    height: 97px;
+    background: #F6F8FA;
+    border: 1px solid #DCDCDC;
+    border-left: none;
+    border-right: none;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #333333;
+}
+.case-container{
+    width: 100%;
+    height: 526px;
+    background:url('../image/首页/bg-行业解决方案.jpg') no-repeat center center;
+    margin-bottom: 77px;
+    overflow: hidden;
+}
+.case-container .title{
+    margin-top:40px;
+}
+.case-container .introduce{
+    width: 800px;
+    height: 60px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #333333;
+}
+.case-container .content{
+    width: 100%;
+    height: 280px;
+    margin-top:40px;
+}
+.case-container .content .cont{
+    position: relative;
+    float: left;
+    width: 240px;
+    height: 280px;
+}
+.case-container .content .cont:not(:nth-last-child(1)){
+    margin-right: 80px;
+}
+.case-container .content .cont>img{
+    width: 100%;
+    height: 100%;
+}
+.case-container .content .cont p{
+    position: absolute;
+    top:90px;
+    left:50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.case-container .content .cont p span{
+    display:inline-block;
+    font-family: PingFangSC-Semibold;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+.case-container .content .cont p i{
+    display:inline-block;
+    width: 24px;
+    height: 2px;
+    background: #fff;
+    margin:8px 0 4px 0;    
+    text-align: center;
+}
+.case-container .content .cont p small{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #FFFFFF;
+}

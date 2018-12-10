@@ -24,6 +24,10 @@ ul,ol{
     clear:both;
 }
 
+.center{
+    width: 1200px;
+    margin:0 auto;
+}
 /* nav导航样式 */
 .nav-container{
     width:100%;
@@ -33,7 +37,7 @@ ul,ol{
     position: fixed;
     top:0;
     background-color: #fff;
-    z-index: 1000;
+    z-index: 10000;
 }
 
 .nav-content{
@@ -75,10 +79,8 @@ ul,ol{
     font-size: 18px;
     float:left;
     cursor: pointer;
-}
-
-.coption:not(:last-child){
-    margin-right: 30px;
+    padding:0 15px;
+    box-sizing: content-box;
 }
 
 .coption:hover{
@@ -109,9 +111,21 @@ ul,ol{
     color:#E9222A;
 }
 
+.nav-tab-list{
+    display:block;
+    position: absolute;
+    top:70px;
+    left: 0;
+    width: 100%;
+    height: 360px;
+    background: #F6F6F6;
+    z-index: 1000;
+}
+
 /* main中间样式 */
 
 .main-container{
+    position: relative;
     width: 100%;
     margin-top:70px;
 }
@@ -186,20 +200,7 @@ ul,ol{
     padding-bottom: 12px;
     margin-bottom: 12px;
 }
-/* 首页样式 */
-.slide-container{
-    width: 100%;
-    height: 600px;
-    position: relative;
-}
-.slide-container .slide{
-    width: 100%;
-    height: 600px;
-}
-.slide-container .slide img{
-    width: 100%;
-    height: 100%;
-}
+
 /* footer底部样式 */
 
 .footer-container{

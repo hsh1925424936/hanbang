@@ -1,7 +1,7 @@
 .xmSlide-pagination {
     width: 100%;
     position: absolute;
-    bottom:30px;
+    bottom:20px;
 	background-color:transparent;
 	text-align: center;
     height: 20px;
@@ -27,7 +27,9 @@
 	-webkit-border-radius: 5px;
 	overflow: hidden;
 }
-
+.product-slide .xmSlide-pagination li a{
+	background-color:#8D8D8D;
+}
 .xmSlide-pagination li a.active {
 	background-color:#E9222A;
 
