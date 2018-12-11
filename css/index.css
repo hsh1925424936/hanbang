@@ -112,7 +112,7 @@ ul,ol{
 }
 
 .nav-tab-list{
-    display:block;
+    display:none;
     position: absolute;
     top:70px;
     left: 0;
@@ -198,7 +198,7 @@ ul,ol{
     border-bottom:solid 1px #DCDCDC;
     text-align: right;
     padding-bottom: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 /* footer底部样式 */

@@ -4,14 +4,14 @@ $(function(){
         init:function(){
             this.events();
             // 初始化的时候选中首页
-            $('.nav-tab .coption').eq(0).click();
+            $('.nav-tab .coption').eq(1).click();
         },
         // 事件绑定
         events:function(){
             var self = this;
             // nav导航hover事件
             $('.nav-tab .coption').hover(function(event){
-                if(!$(this).hasClass('selected')){
+                if(!$(this).hasClass('selected') && commonData.isHover){
                     $(this).find('.nav-tab-list').show();
                 }
             },function(event){
@@ -21,6 +21,12 @@ $(function(){
             $(document).on('click','.nav-tab .coption',function(event){
                 var name = $(this).find('.title').text();
                 $(this).addClass('selected').siblings().removeClass('selected');
+                if(name == '首页'){
+                    commonData.isHover = true;
+                }else{
+                    commonData.isHover = false;
+                    $('.nav-tab-list').hide();
+                }
                 // tpl命名规则都是前四位中文首字母，tab切换便于匹配到相应的模板
                 switch(name){
                     case '首页':
@@ -168,6 +174,7 @@ $(function(){
     var commonData = (function(){
         var data = {
             mainLeftList:null,
+            isHover:false
         };
         return data;
     }());
