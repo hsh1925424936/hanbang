@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,7 @@
     <!-- 轮播图的css -->
     <link rel="stylesheet" href="./css/slide.css">
 </head>
+
 <body>
     <nav class="nav-container">
         <div class="nav-content">
@@ -29,7 +31,6 @@
             <ul class="nav-tab">
                 <li class="coption selected">
                     <span class="title">首页</span>
-                    <div class="nav-tab-list"></div>
                 </li>
                 <li class="coption">
                     <span class="title">走进汉邦</span>
@@ -48,11 +49,11 @@
                     <div class="nav-tab-list"></div>
                 </li>
                 <li class="coption">
-                    <span>联系我们</span>
+                    <span class="title">联系我们</span>
                     <div class="nav-tab-list"></div>
                 </li>
             </ul>
-            
+
         </div>
     </nav>
 
@@ -107,13 +108,20 @@
         </div>
         <div class="footer-ft">
             <p class="footer-p">
-                    公司持有商标：Nucifera®  |  Dubhe®  |  Benetnach®  |  Megres®  |  Phecda®  |  Tauras®  |  Ceres®  |  Libra®  |  Kenase®  |  Hanbon®  |  Kenase®  |  Newstyle®  |  Hedera® | Bonpure®  
+                公司持有商标：Nucifera® | Dubhe® | Benetnach® | Megres® | Phecda® | Tauras® | Ceres® | Libra® | Kenase® | Hanbon® | Kenase® | Newstyle®
+                | Hedera® | Bonpure®
             </p>
             <p class="footer-p">
                 Copyright&copy;2018江苏汉邦科技有限公司&nbsp;浙ICP备05007700号
             </p>
         </div>
     </footer>
+    <!-- 联系我们的职位详情弹窗 -->
+    <div class="contactDetail">
+        <div class="content">
+            dfdsfds
+        </div>
+    </div>
     <!-- nav下面的菜单模板 -->
     <script id="navTabList" type="text/x-handlebars-template">
     
@@ -290,11 +298,39 @@
             </div>
         </div>
     </script>
-
+    <!-- 汉邦资讯-行业动态详情模板 -->
+    <script id="newsDetail" type="text/x-handlebars-template">
+        <div class="newsDetail">
+            <div class="title">
+                <h4>CFDA最新发布！升级落地的数据保护制度助力国产创新药</h4>
+                <p>原创： 小药丸 CPhI制药在线 4月27日	</p>
+            </div>
+            <p>4月26日，CFDA办公室公开征求《药品试验数据保护实施办法（暂行）》意见。《办法》出台的目的在于完善和落实药品试验数据保护制度，促进药品创新，提高我国创新药物的可及性，满足临床用药需求。
+                </p>
+            <h5>数据保护制度--与专利制度平行的知识产权保护制度</h5>
+            <p>作为与药品专利制度平行的知识产权保护制度，数据保护并不会延长药品的专利保护期限，这种保护制度能够为没有专利保护或专利保护不足的药品提供最基本的市场保护，尤其是对于新研发的创新药物，最终目的在于激励制药企业的创新活动。
+                </p>
+                <img src="./image/汉邦资讯/分组.png">
+                <p>早在1984年，Hatch-Waxman法案对新化学实体给与了5年的数据保护期，美国由此成为了全球首个设立药品数据保护制度的国家。
+       
+                        目前，美国的数据保护制度已经发展得较为完善。首先，FDA对数据保护的范围做出了清楚的界定且覆盖范围广，新型化学药品、治疗用生物制品以及具有新适应症的药品都适用于数据保护；其次，在保护方式上，FDA采取了"不受理、不批准"的模式，即处于数据保护期内的仿制药申请将不被受理或者是在受理后不被批准，通过这种模式FDA授予了享有数据保护资格药品的市场独占权。与美国相同，欧盟的数据保护制度也采取了这种保护方式。
+                        </p>
+                <h5>升级落地 助力国产创新药</h5>
+                <p>作为加入WTO进程的一部分，我国于2002年颁布《药品管理法实施条例》时正式引入了数据保护制度。以此为依据，2007年，修订的《药品注册管理办法》对数据保护的保护期限和保护条件进行了法规上的明确，后来逐步发展演化，曾经历过药品行政保护、新药保护等特定的数据保护时期。
+       
+                        然而，此前法规中关于数据保护制度的设定在实际操作过程中存在着诸多问题，法规基本停留在理论层面，在具体的执行过程中并没有达到应有的效果。
+                               
+                        这些问题主要表现为数据保护适用范围定义不清晰且过于狭窄、保护方式缺乏可操作的机制等方面，诸如给与6年试验数据保护的对象描述为"含有新型化学成分"的药品，本身模糊，且在当前越来越重要的生物药并没有被包括在内。
+                               
+                        2017年，CFDA发布了《关于鼓励药品医疗器械创新保护创新者权益的相关政策（征求意见稿）》，意见稿的内容之一就是明确要完善数据保护制度，对创新药、罕见病用药以及儿童用药等多种情况分别给与不同的保护期限，旧有法规中存在的问题正在逐步完善。
+                        </p>
+        </div>
+    </script>
     <script src="./js/jquery3.3.1.min.js"></script>
     <script src="./js/handlebars.min.js"></script>
     <script src="./js/slides.js"></script>
     <script src="./js/page.js"></script>
     <script src="./js/index.js"></script>
 </body>
+
 </html>

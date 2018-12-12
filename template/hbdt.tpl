@@ -5,13 +5,17 @@
     <span>&nbsp;&frasl;&nbsp;</span>
     <span>{{name}}</span>
 </div>
-<div class="hbdt">
-    <div class="image">
-        <img src="" alt="">
-    </div>
+<div class="hbdt zjhb">
+        <div class="img">
+                <div class="title">
+                    <h3>汉邦动态</h3>
+                    <i></i>
+                </div>
+                <img src="../image/汉邦资讯/汉邦动态.jpg" alt="">
+            </div>
     <ul class="content">
         <li>
-            <img src="" alt="">
+            <img src="../image/汉邦资讯/汉邦动态-新闻图1.jpg" alt="">
             <div class="cont">
                 <h3>汉邦科技超临界流体色谱系统（SFC）亮相21届全国色谱大会</h3>
                 <time>2017-05-20</time>
@@ -20,7 +24,7 @@
             </div>
         </li>
         <li>
-            <img src="" alt="">
+                <img src="../image/汉邦资讯/汉邦动态-新闻图2.jpg" alt="">
             <div class="cont">
                 <h3>汉邦科技超临界流体色谱系统（SFC）亮相21届全国色谱大会</h3>
                 <time>2017-05-20</time>
@@ -29,7 +33,7 @@
             </div>
         </li>
         <li>
-            <img src="" alt="">
+            <img src="../image/汉邦资讯/汉邦动态-新闻图3.jpg" alt="">
             <div class="cont">
                 <h3>汉邦科技超临界流体色谱系统（SFC）亮相21届全国色谱大会</h3>
                 <time>2017-05-20</time>
@@ -38,7 +42,7 @@
             </div>
         </li>
         <li>
-            <img src="" alt="">
+            <img src="../image/汉邦资讯/汉邦动态-新闻图4.jpg" alt="">
             <div class="cont">
                 <h3>汉邦科技超临界流体色谱系统（SFC）亮相21届全国色谱大会</h3>
                 <time>2017-05-20</time>
@@ -47,7 +51,7 @@
             </div>
         </li>
         <li>
-            <img src="" alt="">
+            <img src="../image/汉邦资讯/汉邦动态-新闻图5.jpg" alt="">
             <div class="cont">
                 <h3>汉邦科技超临界流体色谱系统（SFC）亮相21届全国色谱大会</h3>
                 <time>2017-05-20</time>

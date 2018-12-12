@@ -13,4 +13,23 @@
         </div>
         <img src="../image/走进汉邦/荣誉资质.jpg" alt="">
     </div>
+    <h4>荣誉证书</h4>
+    <div class="cont clearfix">
+        <img src="../image/走进汉邦/证书/荣誉证书-1.jpg" alt="">
+        <img src="../image/走进汉邦/证书/荣誉证书-2.jpg" alt="">
+        <img src="../image/走进汉邦/证书/荣誉证书-3.jpg" alt="">
+        <img src="../image/走进汉邦/证书/荣誉证书-4.jpg" alt="">
+        <img src="../image/走进汉邦/证书/荣誉证书-5.jpg" alt="">
+        <img src="../image/走进汉邦/证书/荣誉证书-6.jpg" alt="">
+        <img src="../image/走进汉邦/证书/荣誉证书-7.jpg" alt="">
+        <img src="../image/走进汉邦/证书/荣誉证书-8.jpg" alt="">
+    </div>
+    <h4>认证证书</h4>
+    <div class="cont1 clearfix">
+        <img src="../image/走进汉邦/证书/认证证书-1.jpg" alt="">
+        <img src="../image/走进汉邦/证书/认证证书-2.jpg" alt="">
+        <img src="../image/走进汉邦/证书/认证证书-3.jpg" alt="">
+        <img src="../image/走进汉邦/证书/认证证书-4.jpg" alt="">
+        <img src="../image/走进汉邦/证书/认证证书-5.jpg" alt="">
+    </div>
 </div>

@@ -1,7 +1,8 @@
 .page{
     list-style: none;
     float: right;
-    margin-top:20px;
+    margin-top:24px;
+    margin-bottom: 75px;
 }
 .page>li{
     float: left;
@@ -13,14 +14,14 @@
     margin: 5px;
 }
 .page .pageItemActive{
-    border: solid thin #0099FF;
+    border: solid thin #E9222A;
     margin: 5px;
-    background-color: #0099FF;
+    background-color: #E9222A;
     color:white;
 }
 .page .pageItem:hover{
-    border: solid thin #0099FF;
-    background-color: #0099FF;
+    border: solid thin #E9222A;
+    background-color: #E9222A;
     color:white;
 }
 .page .pageItemDisable{

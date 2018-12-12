@@ -1,86 +1,4 @@
-/* 产品中心-液相色谱系统 */
-.yxsp h2{
-    padding: 45px 0 68px 0;
-}
-.yxsp p{
-    letter-spacing: 2;
-}
-.yxsp .img{
-    width: 520px;
-    height: 320px;
-    margin:20px auto;
-    border:solid 1px #ccc;
-}
-.yxsp h4{
-    width: 100%;
-    color: red;
-    text-align: center;
-    margin:30px 0;
-}
 
-/* 汉邦资讯-汉邦动态 */
-.hbdt .image{
-    width: 100%;
-    height: 300px;
-    background: #9E9EA4;
-    margin-bottom: 20px;
-}
-.hbdt .image img{
-    width: 100%;
-    height: 100%;
-}
-.hbdt ul.content li{
-    width: 100%;
-    height: 144px;
-    background: #F5F5F5;
-    padding: 10px;
-}
-.hbdt ul.content li:not(:nth-last-child(1)){
-    margin-bottom: 10px;
-}
-.hbdt ul.content li img{
-    float:left;
-    width: 192px;
-    height: 100%;
-    background: #ccc;
-}
-.hbdt ul.content li .cont{
-    float: left;
-    width: calc(100% - 192px);
-    height: 100%;
-    padding: 5px 10px;
-    color: #676767;
-    font-size: 14px;
-}
-.hbdt ul.content li .cont h3{
-    color:#000;
-    font-weight:normal;
-    font-size:18.72px;
-    margin-bottom: 10px;
-}
-.hbdt ul.content li .cont hr{
-    opacity: 0.3;
-    margin-top:10px;
-}
-.hbdt ul.content li .cont p{
-    display:-webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp:2;
-    overflow: hidden;
-    margin-top:10px;
-    box-sizing: content-box;
-}
-/* 行业动态的样式 */
-.hydt .image{
-    width: 100%;
-    height: 300px;
-    background: #9E9EA4;
-    margin-bottom: 20px;
-}
-.hydt .image img{
-    width: 100%;
-    height: 100%;
-}
 /*走进汉邦-关于汉邦*/
 .zjhb{
     width:100%;
@@ -222,6 +140,35 @@
     letter-spacing: 0;
     margin-top:10px;
 }
+/* 走进汉邦-荣誉资质 */
+.ryzz h4{
+    font-family: PingFangSC-Regular;
+    font-size: 24px;
+    color: #333333;
+    text-align: center;
+    margin:24px 0 16px 0;
+    font-weight: normal;
+}
+.ryzz .cont img{
+    width: 280px;
+    height: 200px;
+    float: left;
+    margin-bottom: 24px;
+}
+.ryzz .cont img:not(:nth-of-type(3n)){
+    margin-right:37px;
+}
+.ryzz .cont1{
+    margin-bottom: 64px;
+}
+.ryzz .cont1 img{
+    width: 150px;
+    height: 200px;
+    float: left;
+}
+.ryzz .cont1 img:not(:nth-last-child(1)){
+    margin-right: 41px;
+}
 /*走进汉邦-发展历程*/
 .fzlc .img{
     height: 702px;
@@ -232,4 +179,269 @@
 }
 .fzlc .img .title i{
     background: #E9222A;
+}
+
+/* 汉邦资讯-汉邦动态 */
+.hbdt .image{
+    width: 100%;
+    height: 300px;
+    background: #9E9EA4;
+    margin-bottom: 20px;
+}
+.hbdt .image img{
+    width: 100%;
+    height: 100%;
+}
+.hbdt ul.content li{
+    width: 100%;
+    height: 144px;
+    background: #F5F5F5;
+    padding: 10px;
+}
+.hbdt ul.content li:not(:nth-last-child(1)){
+    margin-bottom: 10px;
+}
+.hbdt ul.content li img{
+    float:left;
+    width: 192px;
+    height: 100%;
+    background: #ccc;
+}
+.hbdt ul.content li .cont{
+    float: left;
+    width: calc(100% - 192px);
+    height: 100%;
+    padding: 5px 10px;
+    color: #676767;
+    font-size: 14px;
+}
+.hbdt ul.content li .cont h3{
+    color:#000;
+    font-weight:normal;
+    font-size:18.72px;
+    margin-bottom: 10px;
+}
+.hbdt ul.content li .cont hr{
+    opacity: 0.3;
+    margin-top:10px;
+}
+.hbdt ul.content li .cont p{
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+    margin-top:10px;
+    box-sizing: content-box;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+/* 行业动态的样式 */
+.hydt .image{
+    width: 100%;
+    height: 300px;
+    background: #9E9EA4;
+    margin-bottom: 20px;
+}
+.hydt .image img{
+    width: 100%;
+    height: 100%;
+}
+.hydt .content li{
+    width: 100%;
+    height: 130px;
+    padding: 30px 0;
+    border-bottom: solid 1px #DCDCDC;
+}
+.hydt .content li .time{
+    float: left;
+    width: 50px;
+    height: 56px;
+    border: 1px solid #DBDBDB;
+    border-radius: 2px;
+    margin-right: 20px;
+    padding: 4px 0;
+    text-align:center;
+}
+.hydt .content li .time span{
+    display:inline-block;
+    font-family: PingFangSC-Regular;
+    font-size: 24px;
+    color: #666666;
+    line-height: 24px;
+}
+.hydt .content li .time small{
+    display:inline-block;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #666666;
+    line-height: 12px;
+}
+.hydt .content li .cont{
+    float:left;
+    width: calc(100% - 70px);
+}
+.hydt .content li .cont h3{
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+.hydt .content li .cont p{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #333333;
+    line-height: 18px;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+/* 汉邦资讯-行业动态-详情 */
+.newsDetail{
+    text-align: center;
+    margin-bottom: 84px;
+}
+.newsDetail .title h4{
+    font-family: PingFangSC-Semibold;
+    font-size: 24px;
+    color: #333333;
+    text-align: left;
+    margin-bottom: 8px;
+    margin-top:40px;
+}
+.newsDetail .title P{
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #666666;
+    line-height: 20px;
+    margin-bottom: 60px;
+    text-align:left;
+}
+.newsDetail>h5{
+    font-family: PingFangSC-Semibold;
+    font-size: 18px;
+    color: #E9222A;
+    text-align: center;
+    margin:24px 0;
+}
+.newsDetail>p{
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #333333;
+    margin:24px 0;
+    text-align: left;
+}
+.newsDetail>img{
+    width: 681px;
+    height: 309px;
+}
+/* 产品中心-液相色谱系统 */
+.yxsp h2{
+    padding: 45px 0 68px 0;
+}
+.yxsp p{
+    letter-spacing: 2;
+}
+.yxsp .img{
+    width: 520px;
+    height: 320px;
+    margin:20px auto;
+    border:solid 1px #ccc;
+}
+.yxsp h4{
+    width: 100%;
+    color: red;
+    text-align: center;
+    margin:30px 0;
+}
+
+/* 联系我们-加入汉邦 */
+.jrhb .email{
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-top:20px;
+    opacity: 0.9;
+}
+.jrhb .email li{
+    height: 22px;
+    line-height: 22px;
+    margin-bottom: 2px;
+}
+.jrhb .content{
+    margin-bottom: 65px;
+}
+.jrhb .content .cont{
+    width: 100%;
+    height: 140px;
+    padding: 20px 0;
+    border-bottom: solid 1px #DCDCDC;
+}
+.jrhb .content .cont h4{
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #333333;
+    height: 28px;
+    line-height: 28px;
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+.jrhb .content .cont h4 a{
+    width: 80px;
+    height: 28px;
+    line-height: 28px;
+    float: right;
+    text-align: center;
+    color: #E9222A;
+    border: 1px solid #E9222A;
+    border-radius: 2px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    letter-spacing: 0;
+    text-decoration: none;
+}
+.jrhb .content .cont .address{
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+.jrhb .content .cont .task{
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #666666;
+    line-height: 18px;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* 联系我们-联系我们 */
+.lxwm{
+    margin-bottom: 289px;
+}
+.lxwm .img .email{
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-top:20px;
+}
+.lxwm .img .email li{
+    height: 22px;
+    line-height: 22px;
+    opacity: 0.9;
+    margin-bottom: 2px;
 }

@@ -4,7 +4,7 @@ $(function(){
         init:function(){
             this.events();
             // 初始化的时候选中首页
-            $('.nav-tab .coption').eq(1).click();
+            $('.nav-tab .coption').eq(5).click();
         },
         // 事件绑定
         events:function(){
@@ -35,22 +35,43 @@ $(function(){
                         break;
                     case '走进汉邦':
                         commonData.mainLeftList = {
-                            "image":'',
-                            "data":[
-                                {name:'关于汉邦',tpl:'gyhb',selected:true,parent:'走进汉邦'},
-                                {name:'汉邦理念',tpl:'hbln',selected:false,parent:'走进汉邦'},
-                                {name:'荣誉资质',tpl:'ryzz',selected:false,parent:'走进汉邦'},
-                                {name:'发展历程',tpl:'fzlc',selected:false,parent:'走进汉邦'},
+                            image:'../image/走进汉邦/icon-走进汉邦.png',
+                            English:'INTO HANBON',
+                            parent:'走进汉邦',
+                            data:[
+                                {name:'关于汉邦',tpl:'gyhb',selected:true},
+                                {name:'汉邦理念',tpl:'hbln',selected:false},
+                                {name:'荣誉资质',tpl:'ryzz',selected:false},
+                                {name:'发展历程',tpl:'fzlc',selected:false},
                             ]
                         };
                         self.renderMainLeftTab(commonData.mainLeftList);
                         break;
                     case '汉邦资讯':
                         commonData.mainLeftList = {
-                            "image":'',
-                            "data":[
-                                {name:'汉邦动态',tpl:'hbdt',selected:true,parent:'汉邦资讯'},
-                                {name:'行业动态',tpl:'hydt',selected:false,parent:'汉邦资讯'},
+                            image:'../image/汉邦资讯/icon-汉邦资讯.png',
+                            English:'HANBON NEWS',
+                            parent:'汉邦资讯',
+                            data:[
+                                {name:'汉邦动态',tpl:'hbdt',selected:true},
+                                {name:'行业动态',tpl:'hydt',selected:false},
+                            ]
+                        };
+                        self.renderMainLeftTab(commonData.mainLeftList);
+                        break;
+                    case '产品中心':
+                        commonData.mainLeftList = {
+                            image:'../image/产品中心/icon-产品中心.png',
+                            English:'PRODUCT CENTER',
+                            parent:'产品中心',
+                            data:[
+                                {name:'液相色谱系统',tpl:'yxsp',selected:true,},
+                                {name:'生物制药下游纯化设备',tpl:'swzy',selected:false},
+                                {name:'连续色谱系统',tpl:'lxsp',selected:false},
+                                {name:'超临界流体色谱系统',tpl:'clj',selected:false},
+                                {name:'溶剂回收',tpl:'rjhs',selected:false},
+                                {name:'制药工程整体解决方案',tpl:'zygc',selected:false},
+                                {name:'药材及配件',tpl:'ycpj',selected:false}
                             ]
                         };
                         self.renderMainLeftTab(commonData.mainLeftList);
@@ -59,32 +80,20 @@ $(function(){
                         commonData.mainLeftList = {
 
                         };
+                        $('.main-container .main-cont').html('<h1 style="text-align:center;margin:200px 0 300px;">暂无数据</h1>');
                         break;
                     case '联系我们':
                         commonData.mainLeftList = {
-                            "image":'',
-                            "data":[
-                                {name:'加入汉邦',tpl:'jrhb',selected:true,parent:'联系我们'},
-                                {name:'联系我们',tpl:'lxwm',selected:false,parent:'联系我们'},
+                            image:'../image/联系我们/icon-联系我们.png',
+                            English:'CONTACT US',
+                            parent:'联系我们',
+                            data:[
+                                {name:'加入汉邦',tpl:'jrhb',selected:true},
+                                {name:'联系我们',tpl:'lxwm',selected:false},
                             ]
                         }
                         self.renderMainLeftTab(commonData.mainLeftList);
                         break; 
-                    case '产品中心':
-                        commonData.mainLeftList = {
-                            "image":'',
-                            "data":[
-                                {name:'液相色谱系统',tpl:'yxsp',selected:true,parent:'产品中心'},
-                                {name:'生物制药下游纯化设备',tpl:'swzy',selected:false,parent:'产品中心'},
-                                {name:'连续色谱系统',tpl:'lxsp',selected:false,parent:'产品中心'},
-                                {name:'超临界流体色谱系统',tpl:'clj',selected:false,parent:'产品中心'},
-                                {name:'溶剂回收',tpl:'rjhs',selected:false,parent:'产品中心'},
-                                {name:'制药工程整体解决方案',tpl:'zygc',selected:false,parent:'产品中心'},
-                                {name:'药材及配件',tpl:'ycpj',selected:false,parent:'产品中心'}
-                            ]
-                        };
-                        self.renderMainLeftTab(commonData.mainLeftList);
-                        break;
                 }
             })
             // 页面中部左侧的tab切换事件
@@ -92,12 +101,25 @@ $(function(){
                 $(this).addClass('selected').siblings().removeClass('selected');
                 var tplName = $(this).data('tpl'),
                     name = $(this).find('span:eq(0)').text(),
-                    parent = $(this).data('parent'),
+                    parent = $(this).parent().siblings('.logo').find('h1 span').text(),
                     data = {};
                 data.tpl = tplName;
                 data.name = name;
                 data.parent = parent;
                 self.renderTpl(data);
+            })
+            // 点击汉邦资讯中的行业动态的标题跳转到详情
+            $(document).on('click','.hydt .content li',function(event){
+                $('.main-right .hydt').html(Handlebars.compile($('#newsDetail').html()));
+            })
+            // 点击联系我们的职位详情
+            $(document).on('click','.jrhb .content .cont a',function(event){
+                var height = $(document).height();
+                $('.contactDetail').css({
+                    'height':height+'px',
+                });
+                $('body').css('overflow','hidden');
+                $('.contactDetail').fadeIn()
             })
         },
         // 首页:注意这里是将模板写到了index.html里，和下面的引入是一样的，供选择
@@ -159,13 +181,14 @@ $(function(){
             $.get('/template/'+data.tpl+'.tpl',function(res){
                 $('.main-container .main-cont .main-right').html('');
                 $('.main-container .main-cont .main-right').html(Handlebars.compile(res)(data));
-                self.initHbdtPage(50,1);
+                self.initHbdtPage($('#hbdtPage'),50,1);
+                self.initHbdtPage($('#hydtPage'),50,1);
             })
         },
         // 汉邦动态中的分页
         // total:总数；currentPage初始化的时候的页码数，可以固定传1
-        initHbdtPage:function(total,currentPage){
-            $('#hbdtPage').initPage(total,currentPage,function(m){
+        initHbdtPage:function($dom,total,currentPage){
+            $dom.initPage(total,currentPage,function(m){
                 alert(m);
             })
         }
