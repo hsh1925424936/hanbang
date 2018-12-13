@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .container{
+            width: 100%;
+            height: 200%;
+        }
+    .cont{
+        position:fixed;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:rgba(0,0,0,.5);
+        z-index: 100;
+        display:none;
+    }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="cont"></div>
+    <script src="./jquery3.3.1.min.js"></script>
+    <script src="./menu.js"></script>
+    <link rel="stylesheet" href="./menu.css">
+    <script>
+        $('.container').menu({
+            data:[
+                {
+                    title:'1.一级节点',
+                    children:[
+                        {
+                            title:'11.二级节点',
+                            children:[
+                                {
+                                    title:'111.三级节点',
+                                    children:[
+                                        {title:'1111.四级节点'},
+                                        {title:'1111.四级节点'},
+                                        {title:'1111.四级节点'},
+                                    ]
+                                },
+                                {title:'111.三级节点'},
+                                {title:'111.三级节点'},
+                            ]
+                        },
+                        {
+                            title:'12.二级节点',
+                            children:[
+                                {title:'112.三级节点'},
+                                {title:'112.三级节点'},
+                                {title:'112.三级节点'},
+                            ]
+                        },
+                        {title:'13.二级节点'},
+                        {title:'14.二级节点'},
+                    ]
+                },
+                {
+                    title:'2.一级节点',
+                    children:[
+                        {title:'21.二级节点'},
+                        {title:'22.二级节点'},
+                        {title:'23.二级节点'},
+                        {title:'24.二级节点'},
+                    ]
+                },
+            ]
+        })
+    </script>
+</body>
+</html>
