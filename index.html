@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="./css/page.css">
     <!-- 轮播图的css -->
     <link rel="stylesheet" href="./css/slide.css">
+    <!-- 首页导航下面的菜单样式 -->
+    <link rel="stylesheet" href="./css/menu.css">
 </head>
 
 <body>
@@ -119,12 +121,37 @@
     <!-- 联系我们的职位详情弹窗 -->
     <div class="contactDetail">
         <div class="content">
-            dfdsfds
+            <div class="title">
+                <h3>分析分离研发工程师</h3>
+                <p>工作地点：江苏省淮安市经济开发区  |  招聘人数：1</p>
+            </div>
+            <div class="cont">
+                <p>岗位职责：</p>
+                <ul>
+                    <li>1、样品制备方法的开发；能够配合应用技术组长完成样品制备方法的开发，样品分析有困难时，应将自己分析结果及详细实验情况以电子邮件形式发直接技术组长并抄送部门主管；</li>
+                    <li>2、样品的半制备：能够将开发的制备方法放大到制备方法，使用预装柱进行放大，能够使用相关设备进行溶剂的回收以及后处理；</li>
+                    <li>3、样品的制备：能够将开发的制备方法放大到制备方法，使用DAC进行放大，并且掌握DAC的原理以及使用方法，能够使用相关设备进行溶剂的回收以及后处理；</li>
+                    <li>4. 工艺的现场交接：到客户现场，将实验室工艺以及小试工艺，完整的放大到客户所使用设备上。出差期间，每天将工艺交接情况，向实验室主管汇报；</li>
+                    <li>5、维护维修所使用的仪器设备：保持仪器设备处于良好工作状态，仪器设备表面干净、摆放整齐，仪器有故障时，能够判断仪器故障的部件，简单故障能够自行处理解决；</li>
+                    <li>6、工作汇报：每周五下午下班前前将本周实验记录以电子邮件形式发送至应用技术组长；每个项目待项目结束后以word形式，对项目进展进行总结，以电子邮件形式发直接技术组长并抄送部门主管；每月月底做本月工作总结，并以PPT的形式做汇报；年底做本年度工作总结，并以PPT的形式做汇报；</li>
+                    <li>7、回答客户技术咨询：礼貌、真诚、及时、准确并做好记录工作；对自己不太清楚的要了解清楚后再给客户回复或请相关技术专家给客户回答。每月整理一次客户记录单并以电子邮件形式发直接上级并抄送部门经理及销售部；</li>
+                    <li>8、保持实验室整洁；</li>
+                </ul>
+            </div>
+            <div class="ft">
+                <a href="javascript:;">确定</a>
+            </div>
         </div>
     </div>
     <!-- nav下面的菜单模板 -->
     <script id="navTabList" type="text/x-handlebars-template">
-    
+        <div class="tab-container clearfix">
+            <div class="tab-left">
+                <img src="{{img}}">
+                <h3>{{name}}</h3>
+            </div>
+            <div class="tab-right"></div>
+        </div>
     </script>
     <!-- 首页模板 -->
     <script id="homePage" type="text/x-handlebars-template"> 
@@ -330,6 +357,7 @@
     <script src="./js/handlebars.min.js"></script>
     <script src="./js/slides.js"></script>
     <script src="./js/page.js"></script>
+    <script src="./js/menu.js"></script>
     <script src="./js/index.js"></script>
 </body>
 

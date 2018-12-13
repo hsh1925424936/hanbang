@@ -4,15 +4,81 @@ $(function(){
         init:function(){
             this.events();
             // 初始化的时候选中首页
-            $('.nav-tab .coption').eq(5).click();
+            $('.nav-tab .coption').eq(0).click();
         },
         // 事件绑定
         events:function(){
             var self = this;
             // nav导航hover事件
             $('.nav-tab .coption').hover(function(event){
+                var name = $(this).find('.title').text();
                 if(!$(this).hasClass('selected') && commonData.isHover){
                     $(this).find('.nav-tab-list').show();
+                    switch (name){
+                        case '走进汉邦':
+                            commonData.menus = {
+                                img:'../image/首页/首页-head-走进汉邦.jpg',
+                                name:'走进汉邦',
+                                data:[
+                                    {title:'关于汉邦'},
+                                    {title:'汉邦理念'},
+                                    {title:'荣誉资质'},
+                                    {title:'发展历程'},
+                                ]
+                            }
+                            break;
+                        case '汉邦资讯':
+                            commonData.menus = {
+                                img:'../image/首页/汉邦资讯.jpg',
+                                name:'汉邦资讯',
+                                data:[
+                                    {title:'汉邦动态'},
+                                    {title:'行业动态'},
+                                ]
+                            }
+                            break;
+                        case '产品中心':
+                            commonData.menus = {
+                                img:'../image/首页/产品中心.jpg',
+                                name:'产品中心',
+                                data:[
+                                    {
+                                        title:'液相色谱系统',
+                                        children:[
+                                            {
+                                                title:'实验室高效液相色谱系统',
+                                                childern:[
+                                                    {title:'分析型'},
+                                                    {title:'半制备'},
+                                                    {title:'制备型'}
+                                                ]
+                                            },
+                                            {title:'工业制备液相色谱系统'}
+                                        ]
+                                    },
+                                    {title:'生物制药下游纯化设备'},
+                                    {title:'超临界流体色谱系统'},
+                                    {title:'溶剂回收'},
+                                    {title:'制药工程整体解决方案'},
+                                    {title:'耗材及配件'}
+                                ]
+                            }
+                            break;
+                        case '解决方案':
+                            $(this).find('.nav-tab-list').hide();
+                            break;
+                        case '联系我们':
+                            commonData.menus = {
+                                img:'../image/联系我们/加入汉邦.jpg',
+                                name:'联系我们',
+                                data:[
+                                    {title:'加入汉邦'},
+                                    {title:'联系我们'}
+                                ]
+                            }
+                            break;
+                    }
+                    self.renderMenus(commonData.menus);
                 }
             },function(event){
                 $(this).find('.nav-tab-list').hide()
@@ -21,13 +87,13 @@ $(function(){
             $(document).on('click','.nav-tab .coption',function(event){
                 var name = $(this).find('.title').text();
                 $(this).addClass('selected').siblings().removeClass('selected');
-                if(name == '首页'){
-                    commonData.isHover = true;
-                }else{
-                    commonData.isHover = false;
-                    $('.nav-tab-list').hide();
-                }
                 // tpl命名规则都是前四位中文首字母，tab切换便于匹配到相应的模板
+                if(name == '首页'){
+                    commonData.isHover = true
+                }else{
+                    commonData.isHover = false
+                    $(this).find('.nav-tab-list').hide();
+                }
                 switch(name){
                     case '首页':
                         commonData.mainLeftList = {};
@@ -80,7 +146,7 @@ $(function(){
                         commonData.mainLeftList = {
 
                         };
-                        $('.main-container .main-cont').html('<h1 style="text-align:center;margin:200px 0 300px;">暂无数据</h1>');
+                        $('.main-container .main-cont').html('<h1 style="text-align:center;margin:100px 0 200px;">暂无数据</h1>');
                         break;
                     case '联系我们':
                         commonData.mainLeftList = {
@@ -114,12 +180,20 @@ $(function(){
             })
             // 点击联系我们的职位详情
             $(document).on('click','.jrhb .content .cont a',function(event){
-                var height = $(document).height();
-                $('.contactDetail').css({
-                    'height':height+'px',
-                });
-                $('body').css('overflow','hidden');
-                $('.contactDetail').fadeIn()
+                $('.contactDetail').show();
+                $('.contactDetail .content').fadeIn();
+            })
+            // 关闭职位详情
+            $(document).on('click','.contactDetail .ft a',function(event){
+                $('.contactDetail .content').fadeOut();
+                $('.contactDetail').hide();
+            })
+        },
+        // 首页中导航下面的菜单
+        renderMenus:function(res){
+            $('.nav-container .nav-tab-list').html(Handlebars.compile($('#navTabList').html())(res));
+            $('.nav-container .nav-tab-list .tab-right').menu({
+                data:res.data
             })
         },
         // 首页:注意这里是将模板写到了index.html里，和下面的引入是一样的，供选择
@@ -196,7 +270,8 @@ $(function(){
     // 公用的数据
     var commonData = (function(){
         var data = {
-            mainLeftList:null,
+            mainLeftList:null,//左侧菜单
+            menus:[],//首页头部菜单
             isHover:false
         };
         return data;

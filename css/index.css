@@ -74,14 +74,13 @@ ul,ol{
 
 .coption{
     width: 95px;
-    height:calc(100% - 4px);
+    height:100%;
     text-align: center;
     line-height: 70px;
     font-size: 18px;
     float:left;
     cursor: pointer;
-    padding:0 15px;
-    box-sizing: content-box;
+    margin:0 15px;
 }
 
 .coption:hover{
@@ -123,6 +122,33 @@ ul,ol{
     height: 360px;
     background: #F6F6F6;
     z-index: 1000;
+}
+
+.nav-tab-list .tab-container{
+    width: 1200px;
+    height: 100%;
+    margin:0 auto;
+    padding: 20px 0;
+}
+
+.nav-tab-list .tab-container .tab-left{
+    float: left;
+}
+
+.nav-tab-list .tab-container .tab-left img{
+    width: 280px;
+    height: 160px;
+    margin-bottom: 20px;
+}
+
+.nav-tab-list .tab-container .tab-left h3{
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #E9222A;
+}
+
+.nav-tab-list .tab-container .tab-right{
+    float:left;
 }
 
 /* main中间样式 */
@@ -232,14 +258,86 @@ ul,ol{
 }
 /* 职位详情 */
 .contactDetail{
-    position:absolute;
+    position: fixed;;
     top:0;
     left: 0;
-    width: 100vw;
-    /* height: 100vh; */
+    width: 100%;
+    height: 100%;
     background:rgba(0,0,0,.5);
     z-index: 100000;
     display:none;
+}
+
+.contactDetail .content{
+    width: 720px;
+    height: 685px;
+    background: #fff;
+    position: absolute;
+    top:120px;
+    left: 50%;
+    margin-left: -360px;
+    display:none;
+}
+
+.contactDetail .content .title{
+    width: 720px;
+    height: 143px;
+    position: fixed;
+    top: 120px;
+    left: 50%;
+    margin-left: -360px;
+    padding: 40px;
+    background: #fff;
+    border-bottom: solid 1px #DCDCDC;
+}
+.contactDetail .content .title h3{
+    font-size: 24px;
+    color: #31373D;
+    letter-spacing: 0;
+    margin-bottom: 8px;
+}
+.contactDetail .content .title p{
+    font-size: 16px;
+    color: #333333;
+}
+
+.contactDetail .content .cont{
+    width: 100%;
+    height: 470px;
+    margin-top:143px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    padding: 20px 40px;
+}
+
+.contactDetail .content .cont>P{
+    margin-bottom: 20px;
+}
+
+.contactDetail .content .cont ul li{
+    margin-bottom: 10px;
+}
+.contactDetail .content .ft{
+    width: 720px;
+    height: 72px;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    background: #fff;
+    border-top:solid 1px #DCDCDC;
+    text-align:center;
+}
+
+.contactDetail .content .ft a{
+    display:inline-block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    color: #fff;
+    background: #E9222A;
+    border-radius: 2px;
+    margin-top:16px;
 }
 /* footer底部样式 */
 
