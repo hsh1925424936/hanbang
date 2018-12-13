@@ -133,6 +133,7 @@ ul,ol{
 
 .nav-tab-list .tab-container .tab-left{
     float: left;
+    margin-right: 62px;
 }
 
 .nav-tab-list .tab-container .tab-left img{
@@ -145,6 +146,10 @@ ul,ol{
     font-family: PingFangSC-Regular;
     font-size: 20px;
     color: #E9222A;
+    text-align:left;
+    margin:0;
+    height: 28px;
+    line-height: 28px;
 }
 
 .nav-tab-list .tab-container .tab-right{
@@ -266,6 +271,7 @@ ul,ol{
     background:rgba(0,0,0,.5);
     z-index: 100000;
     display:none;
+    overflow: auto;
 }
 
 .contactDetail .content{
@@ -282,10 +288,10 @@ ul,ol{
 .contactDetail .content .title{
     width: 720px;
     height: 143px;
-    position: fixed;
-    top: 120px;
-    left: 50%;
-    margin-left: -360px;
+    position:absolute;
+    top: 0;
+    left:0;
+    /*margin-left: -360px;*/
     padding: 40px;
     background: #fff;
     border-bottom: solid 1px #DCDCDC;

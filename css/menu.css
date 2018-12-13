@@ -5,11 +5,20 @@
 }
 .menuLi{
     position: relative;
-    width: 100px;
-    height: 30px;
-    border: solid 1px red;
+    width: 270px;
+    height: 22px;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+    border-bottom: solid 1px #DCDCDC;
+}
+.menuLi span{
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #333333;
+    letter-spacing: 0;
+}
+.menuLi:hover{
+    color: #E9222A;
 }
 .menuDiv{
     position: absolute;
