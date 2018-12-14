@@ -119,16 +119,15 @@ ul,ol{
     top:70px;
     left: 0;
     width: 100%;
-    height: 360px;
     background: #F6F6F6;
     z-index: 1000;
+    padding: 20px 0 55px;
 }
 
 .nav-tab-list .tab-container{
     width: 1200px;
     height: 100%;
     margin:0 auto;
-    padding: 20px 0;
 }
 
 .nav-tab-list .tab-container .tab-left{
@@ -150,6 +149,9 @@ ul,ol{
     margin:0;
     height: 28px;
     line-height: 28px;
+    position: relative;
+    top:-30px;
+    font-weight: normal;
 }
 
 .nav-tab-list .tab-container .tab-right{
@@ -345,6 +347,36 @@ ul,ol{
     border-radius: 2px;
     margin-top:16px;
 }
+
+/* 产品中心-详情 */
+
+.productDetail h2{
+    padding: 45px 0 68px 0;
+}
+
+.productDetail p{
+    letter-spacing: 2;
+}
+
+.productDetail .image{
+    width: 520px;
+    height: 320px;
+    margin:20px auto;
+    /* border:solid 1px #ccc; */
+    text-align: center;
+}
+
+.productDetail .image img{
+    width: 565px;
+    height: 328px;
+}
+.productDetail h4{
+    width: 100%;
+    color: red;
+    text-align: center;
+    margin:30px 0;
+}
+
 /* footer底部样式 */
 
 .footer-container{

@@ -10,78 +10,86 @@ $(function(){
         events:function(){
             var self = this;
             // nav导航hover事件
-            $('.nav-tab .coption').hover(function(event){
+            $('.nav-tab .coption').mouseover(function(event){
                 var name = $(this).find('.title').text();
                 if(!$(this).hasClass('selected') && commonData.isHover){
                     $(this).find('.nav-tab-list').show();
-                    switch (name){
-                        case '走进汉邦':
-                            commonData.menus = {
-                                img:'../image/首页/首页-head-走进汉邦.jpg',
-                                name:'走进汉邦',
-                                data:[
-                                    {title:'关于汉邦'},
-                                    {title:'汉邦理念'},
-                                    {title:'荣誉资质'},
-                                    {title:'发展历程'},
-                                ]
-                            }
-                            break;
-                        case '汉邦资讯':
-                            commonData.menus = {
-                                img:'../image/首页/汉邦资讯.jpg',
-                                name:'汉邦资讯',
-                                data:[
-                                    {title:'汉邦动态'},
-                                    {title:'行业动态'},
-                                ]
-                            }
-                            break;
-                        case '产品中心':
-                            commonData.menus = {
-                                img:'../image/首页/产品中心.jpg',
-                                name:'产品中心',
-                                data:[
-                                    {
-                                        title:'液相色谱系统',
-                                        children:[
-                                            {
-                                                title:'实验室高效液相色谱系统',
-                                                childern:[
-                                                    {title:'分析型'},
-                                                    {title:'半制备'},
-                                                    {title:'制备型'}
-                                                ]
-                                            },
-                                            {title:'工业制备液相色谱系统'}
-                                        ]
-                                    },
-                                    {title:'生物制药下游纯化设备'},
-                                    {title:'超临界流体色谱系统'},
-                                    {title:'溶剂回收'},
-                                    {title:'制药工程整体解决方案'},
-                                    {title:'耗材及配件'}
-                                ]
-                            }
-                            break;
-                        case '解决方案':
-                            $(this).find('.nav-tab-list').hide();
-                            break;
-                        case '联系我们':
-                            commonData.menus = {
-                                img:'../image/联系我们/加入汉邦.jpg',
-                                name:'联系我们',
-                                data:[
-                                    {title:'加入汉邦'},
-                                    {title:'联系我们'}
-                                ]
-                            }
-                            break;
-                    }
-                    self.renderMenus(commonData.menus);
+                    // switch (name){
+                    //     case '走进汉邦':
+                    //         commonData.menus = {
+                    //             img:'../image/首页/首页-head-走进汉邦.jpg',
+                    //             name:'走进汉邦',
+                    //             data:[
+                    //                 {title:'关于汉邦'},
+                    //                 {title:'汉邦理念'},
+                    //                 {title:'荣誉资质'},
+                    //                 {title:'发展历程'},
+                    //             ]
+                    //         }
+                    //         break;
+                    //     case '汉邦资讯':
+                    //         commonData.menus = {
+                    //             img:'../image/首页/汉邦资讯.jpg',
+                    //             name:'汉邦资讯',
+                    //             data:[
+                    //                 {title:'汉邦动态'},
+                    //                 {title:'行业动态'},
+                    //             ]
+                    //         }
+                    //         break;
+                    //     case '联系我们':
+                    //         commonData.menus = {
+                    //             img:'../image/首页/产品中心.jpg',
+                    //             name:'产品中心',
+                    //             data:[
+                    //                 {
+                    //                     title:'液相色谱系统',
+                    //                     children:[
+                    //                         {
+                    //                             title:'实验室高效液相色谱系统',
+                    //                             childern:[
+                    //                                 {title:'分析型'},
+                    //                                 {title:'半制备'},
+                    //                                 {title:'制备型'}
+                    //                             ]
+                    //                         },
+                    //                         {title:'工业制备液相色谱系统'}
+                    //                     ]
+                    //                 },
+                    //                 {title:'生物制药下游纯化设备'},
+                    //                 {title:'超临界流体色谱系统'},
+                    //                 {title:'溶剂回收'},
+                    //                 {title:'制药工程整体解决方案'},
+                    //                 {title:'耗材及配件'}
+                    //             ]
+                    //         }
+                    //         break;
+                    //     case '解决方案':
+                    //         $(this).find('.nav-tab-list').hide();
+                    //         break;
+                    //     case '产品中心':
+                    //         commonData.menus = {
+                    //             img:'../image/联系我们/加入汉邦.jpg',
+                    //             name:'联系我们',
+                    //             data:[
+                    //                 {title:'加入汉邦'},
+                    //                 {title:'联系我们'}
+                    //             ]
+                    //         }
+                    //         break;
+                    // }
+                    // self.renderMenus(commonData.menus);
                 }
-            },function(event){
-                $(this).find('.nav-tab-list').hide()
+            })
+            $('.nav-tab .coption').mouseout(function(event){
+                $(this).find('.nav-tab-list').hide();
+            })
+            // 
+            $(document).on('mouseover','.menuLi',function(event){
+                $(this).children('.menuDiv').show();
+            })
+            $(document).on('mouseout','.menuLi',function(event){
+                $(this).children('.menuDiv').hide();
             })
             // nav导航的tab切换事件
             $(document).on('click','.nav-tab .coption',function(event){
@@ -178,6 +186,16 @@ $(function(){
             $(document).on('click','.hydt .content li',function(event){
                 $('.main-right .hydt').html(Handlebars.compile($('#newsDetail').html()));
             })
+            // 产品中心的目录切换
+            $(document).on('click','.yxsp .content .tab li',function(event){
+                var index = $(this).index();
+                $(this).addClass('active').siblings().removeClass('active');
+                $($('.yxsp .content .cont').find('ul')[index]).show().siblings().hide();
+            })
+            // 产品中心的产品点击进入详情
+            $(document).on('click','.yxsp .content .cont ul li',function(event){
+                $('.main-right .yxsp').html(Handlebars.compile($('#productDetail').html()));
+            })
             // 点击联系我们的职位详情
             $(document).on('click','.jrhb .content .cont a',function(event){
                 $('.contactDetail').show();
@@ -199,6 +217,7 @@ $(function(){
         // 首页:注意这里是将模板写到了index.html里，和下面的引入是一样的，供选择
         renderHomePage:function(){
             $('.main-container').html(Handlebars.compile($('#homePage').html()));
+            // 两个轮播图
             $(".slide-container").xmSlide({
                 // width:'100%',
                 height: 600,

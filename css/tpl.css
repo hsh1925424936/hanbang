@@ -345,25 +345,113 @@
     height: 309px;
 }
 /* 产品中心-液相色谱系统 */
-.yxsp h2{
-    padding: 45px 0 68px 0;
-}
-.yxsp p{
-    letter-spacing: 2;
+.yxsp{
+    margin-bottom: 74px;
 }
 .yxsp .img{
-    width: 520px;
-    height: 320px;
-    margin:20px auto;
-    border:solid 1px #ccc;
+    width:100%;
+    height: 300px;
+    background: #FDFDFD;
+    border: 1px solid #D5D5D5;
+    padding:60px 20px;
 }
-.yxsp h4{
+.yxsp .img img{
+    width:310px;
+    height: 180px;
+    float: left;
+    margin-right: 10px;
+}
+.yxsp .img .brief{
+    float: left;
+    width: calc(100% - 320px);
+    margin-top:40px;
+}
+.yxsp .img .brief h3{
+    color: #E9222A;
+    font-weight: normal;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.yxsp .img .brief p{
+    font-size: 14px;
+}
+.yxsp .content{
     width: 100%;
-    color: red;
-    text-align: center;
-    margin:30px 0;
+    background: #F5F5F5;
+    padding: 16px 24px;
 }
-
+.yxsp .content .tab li{
+    position: relative;
+    width: 240px;
+    height: 40px;
+    line-height: 40px;
+    text-align:center;
+    background: #E1E1E1;
+    color:#333;
+    margin-right: 40px;
+    float: left;
+    cursor: pointer;
+}
+.yxsp .content .tab li:hover{
+    background: #E9222A;
+    color: #fff;
+}
+.yxsp .content .tab li.active{
+    background: #E9222A;
+    color: #fff;
+}
+.yxsp .content .tab li.active:after{
+    display:inline-block;
+    content:'';
+    position: absolute;
+    bottom:-6px;
+    left:50%;
+    margin-left:-3px;
+    width:0;
+    height:0;
+    border-style:solid;
+    border-color:#E9222A transparent transparent;
+    border-width:6px 6px 0;
+}
+.yxsp .content .cont{
+    width: 100%;
+    margin-top:22px;
+    padding: 16px 0;
+    border-top:solid 1px #DCDCDC;
+}
+.yxsp .content .cont ul li{
+    float:left;
+    width: 280px;
+    height: 280px;
+    margin-bottom: 16px;
+    cursor:pointer;
+}
+.yxsp .content .cont ul li:not(:nth-child(3n)){
+    margin-right: 13px;
+}
+.yxsp .content .cont ul li img{
+    width: 100%;
+    height: 240px;
+}
+.yxsp .content .cont ul li p{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #DFDFDF;
+    color: #333;
+    text-align: center;
+}
+.yxsp .content .cont ul li:hover{
+    background: #FFFFFF;
+    border: 1px solid #E9222A;
+}
+.yxsp .content .cont ul li:hover p{
+    background:#E9222A;
+    color:#fff;
+}
+.yxsp .content .cont .hide{
+    display:none;
+}
 /* 联系我们-加入汉邦 */
 .jrhb .email{
     font-family: PingFangSC-Regular;
