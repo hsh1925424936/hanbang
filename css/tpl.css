@@ -216,10 +216,16 @@
     font-size: 14px;
 }
 .hbdt ul.content li .cont h3{
-    color:#000;
     font-weight:normal;
     font-size:18.72px;
     margin-bottom: 10px;
+}
+.hbdt ul.content li .cont h3 a{
+    color:#000;
+    text-decoration: none;
+}
+.hbdt ul.content li .cont h3 a:hover{
+    color: #E9222A;
 }
 .hbdt ul.content li .cont hr{
     opacity: 0.3;
@@ -287,10 +293,17 @@
 }
 .hydt .content li .cont h3{
     font-family: PingFangSC-Regular;
-    font-size: 20px;
-    color: #333333;
     margin-bottom: 6px;
     cursor: pointer;
+    font-weight: normal;
+}
+.hydt .content li .cont h3 a{
+    font-size: 20px;
+    color: #333333;
+    text-decoration: none;
+}
+.hydt .content li .cont h3 a:hover{
+    color:#E9222A;
 }
 .hydt .content li .cont p{
     font-family: PingFangSC-Regular;

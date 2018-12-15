@@ -182,9 +182,9 @@ $(function(){
                 data.parent = parent;
                 self.renderTpl(data);
             })
-            // 点击汉邦资讯中的行业动态的标题跳转到详情
-            $(document).on('click','.hydt .content li',function(event){
-                $('.main-right .hydt').html(Handlebars.compile($('#newsDetail').html()));
+            // 点击汉邦资讯中的标题跳转到详情
+            $(document).on('click','.news-detail',function(event){
+                $('.main-right .hb-news').html(Handlebars.compile($('#newsDetail').html()));
             })
             // 产品中心的目录切换
             $(document).on('click','.yxsp .content .tab li',function(event){
@@ -218,44 +218,13 @@ $(function(){
         renderHomePage:function(){
             $('.main-container').html(Handlebars.compile($('#homePage').html()));
             // 两个轮播图
-            $(".slide-container").xmSlide({
-                // width:'100%',
-                height: 600,
-                responsiveWidth:710,
+            var swiper = new Swiper('.swiper-container', {
+                autoplay:true,
+                delay:3000,
                 pagination: {
-                    effect: "fade"  //可换成"slide"
+                    el: '.swiper-pagination',
+                    clickable:true
                 },
-                effect: {
-                    fade: {
-                        speed: 400
-                    }
-                },
-                play: {
-                    effect: "fade", //可换成"slide"
-                    interval: 4000,
-                    auto: true,
-                    pauseOnHover: true,
-                    restartDelay: 2500
-                }
-            });
-            $(".product-slide").xmSlide({
-                height:354,
-                responsiveWidth:710,
-                pagination: {
-                    effect: "slide"  //可换成"slide"
-                },
-                effect: {
-                    fade: {
-                        speed: 400
-                    }
-                },
-                play: {
-                    effect: "slide", //可换成"slide"
-                    interval: 4000,
-                    auto: true,
-                    pauseOnHover: true,
-                    restartDelay: 2500
-                }
             });
         },
         // 渲染页面中部左侧tab切换

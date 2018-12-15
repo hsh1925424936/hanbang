@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="./css/slide.css">
     <!-- 首页导航下面的菜单样式 -->
     <link rel="stylesheet" href="./css/menu.css">
+    <!--swiper-->
+    <link rel="stylesheet" href="./css/swiper.css">
 </head>
 
 <body>
@@ -275,7 +277,7 @@
             </div>
         </div>
     </div>
-    <!-- nav下面的菜单模板 -->
+    <!-- nav下面的菜单模板（没有用到） -->
     <script id="navTabList" type="text/x-handlebars-template">
         <div class="tab-container clearfix">
             <div class="tab-left">
@@ -286,17 +288,20 @@
         </div>
     </script>
     <!-- 首页模板 -->
-    <script id="homePage" type="text/x-handlebars-template"> 
-        <div class="slide-container">
-            <div class="slide">
-                <img src="./image/首页/banenr.jpg">
+    <script id="homePage" type="text/x-handlebars-template">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./image/首页/banenr.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./image/首页/banenr.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./image/首页/banenr.jpg">
+                </div>
             </div>
-            <div class="slide">
-                <img src="./image/首页/banenr.jpg">
-            </div>
-            <div class="slide">
-                <img src="./image/首页/banenr.jpg">
-            </div>
+            <div class="swiper-pagination"></div>
         </div>
         <div class="news home-cont center">
             <div class="title clearfix">
@@ -309,7 +314,7 @@
             </div>
             <div class="content clearfix">
                 <div class="module big">
-                    <img src="./image/首页/首页-新闻图片-1.jpg">
+                    <a href="javascript:;"><img src="./image/首页/首页-新闻图片-1.jpg"></a>
                     <div class="brief clearfix">
                         <p>
                             <span>28</span>
@@ -319,7 +324,7 @@
                     </div>
                 </div>
                 <div class="module small">
-                    <img src="./image/首页/首页-新闻图片-2.jpg">
+                    <a href="javascript:;"><img src="./image/首页/首页-新闻图片-2.jpg"></a>
                     <div class="brief">
                         <p>
                             <span>28</span>
@@ -329,7 +334,7 @@
                     </div>
                 </div>
                 <div class="module small">
-                    <img src="./image/首页/首页-新闻图片-3.jpg">
+                    <a href="javascript:;"><img src="./image/首页/首页-新闻图片-3.jpg"></a>
                     <div class="brief">
                         <p>
                             <span>28</span>
@@ -339,7 +344,7 @@
                     </div>
                 </div>
                 <div class="module small">
-                    <img src="./image/首页/首页-新闻图片-4.jpg">
+                    <a href="javascript:;"><img src="./image/首页/首页-新闻图片-4.jpg"></a>
                     <div class="brief">
                         <p>
                             <span>28</span>
@@ -349,7 +354,7 @@
                     </div>
                 </div>
                 <div class="module small">
-                    <img src="./image/首页/首页-新闻图片-5.jpg">
+                    <a href="javascript:;"><img src="./image/首页/首页-新闻图片-5.jpg"></a>
                     <div class="brief">
                         <p>
                             <span>28</span>
@@ -361,57 +366,80 @@
             </div>
         </div>
         <div class="product-container">
-        <div class="product home-cont center">
-            <div class="title clearfix">
-                <h3>产品展示</h3>
-            </div>
-            <div class="product-slide">
-                <div class="slide clearfix">
-                    <div class="slide-img">
-                        <img src="./image/首页/Bio-Lab 实验室层析 系统.jpg">
-                        <p>Bio-Lab 实验室层析系统</p>
-                    </div>
-                    <div class="slide-img">
-                        <img src="./image/首页/工业制备高效液相色 谱系统.jpg">
-                        <p>工业制备高效液相色谱系统</p>
-                    </div>
-                    <div class="slide-img">
-                        <img src="./image/首页/实验室级超临界流体 色谱仪.jpg">
-                        <p>实验室级超临界流体色谱仪</p>
-                    </div>
-                    <div class="slide-img">
-                        <img src="./image/首页/Bio-TFF自动超滤U F-DF系统.jpg">
-                        <p>Bio-TFF自动超滤UF-DF系统</p>
-                    </div>
-                    <div class="slide-img">
-                        <img src="./image/首页/SCC 自动喷胶层析 柱.jpg">
-                        <p>SCC 自动喷胶层析柱</p>
-                    </div>
+            <div class="product home-cont center">
+                <div class="title clearfix">
+                    <h3>产品展示</h3>
                 </div>
-                <div class="slide clearfix">
-                    <div class="slide-img">
-                        <img src="./image/首页/Bio-Lab 实验室层析 系统.jpg">
-                        <p>Bio-Lab 实验室层析系统</p>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slide-img">
+                                <a href="javascript">
+                                    <img src="./image/首页/Bio-Lab 实验室层析 系统.jpg">
+                                    <p>Bio-Lab 实验室层析系统</p>
+                                </a>
+                            </div>
+                            <div class="slide-img">
+                                <a href="javascript">
+                                    <img src="./image/首页/工业制备高效液相色 谱系统.jpg">
+                                    <p>工业制备高效液相色谱系统</p>
+                                </a>
+                            </div>
+                            <div class="slide-img">
+                                <a href="javascript:;">
+                                    <img src="./image/首页/实验室级超临界流体 色谱仪.jpg">
+                                    <p>实验室级超临界流体色谱仪</p>
+                                </a>
+                            </div>
+                            <div class="slide-img">
+                                <a href="javascript:;">
+                                    <img src="./image/首页/Bio-TFF自动超滤U F-DF系统.jpg">
+                                    <p>Bio-TFF自动超滤UF-DF系统</p>
+                                </a>
+                            </div>
+                            <div class="slide-img">
+                                <a href="javascript:;">
+                                    <img src="./image/首页/SCC 自动喷胶层析 柱.jpg">
+                                    <p>SCC 自动喷胶层析柱</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-img">
+                                <a href="javascript">
+                                    <img src="./image/首页/Bio-Lab 实验室层析 系统.jpg">
+                                    <p>Bio-Lab 实验室层析系统</p>
+                                </a>
+                            </div>
+                            <div class="slide-img">
+                                <a href="javascript">
+                                    <img src="./image/首页/工业制备高效液相色 谱系统.jpg">
+                                    <p>工业制备高效液相色谱系统</p>
+                                </a>
+                            </div>
+                            <div class="slide-img">
+                                <a href="javascript:;">
+                                    <img src="./image/首页/实验室级超临界流体 色谱仪.jpg">
+                                    <p>实验室级超临界流体色谱仪</p>
+                                </a>
+                            </div>
+                            <div class="slide-img">
+                                <a href="javascript:;">
+                                    <img src="./image/首页/Bio-TFF自动超滤U F-DF系统.jpg">
+                                    <p>Bio-TFF自动超滤UF-DF系统</p>
+                                </a>
+                            </div>
+                            <div class="slide-img">
+                                <a href="javascript:;">
+                                    <img src="./image/首页/SCC 自动喷胶层析 柱.jpg">
+                                    <p>SCC 自动喷胶层析柱</p>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="slide-img">
-                        <img src="./image/首页/工业制备高效液相色 谱系统.jpg">
-                        <p>工业制备高效液相色谱系统</p>
-                    </div>
-                    <div class="slide-img">
-                        <img src="./image/首页/实验室级超临界流体 色谱仪.jpg">
-                        <p>实验室级超临界流体色谱仪</p>
-                    </div>
-                    <div class="slide-img">
-                        <img src="./image/首页/Bio-TFF自动超滤U F-DF系统.jpg">
-                        <p>Bio-TFF自动超滤UF-DF系统</p>
-                    </div>
-                    <div class="slide-img">
-                        <img src="./image/首页/SCC 自动喷胶层析 柱.jpg">
-                        <p>SCC 自动喷胶层析柱</p>
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
-        </div>
         </div>
         <div class="case-container">
             <div class="case home-cont center clearfix">
@@ -421,7 +449,9 @@
                 <p class="introduce">FLUKO拥有上万个案例，为用户提供解决方案和混合设备。我们在生物、医药、食品、日化、精细化工、石油化工等几大行业数十个细分行业中，根据客户的工艺流程、物料配方设计高效、合理的方案；同时，我们还在熟悉用户工艺流程的基础上，根据FLUKO的产品优势帮助用户优化流程，得到更好的产品和更高的效率。</p>
                 <div class="content clearfix">
                     <div class="cont">
-                        <img src="./image/首页/抗肿瘤注射液.jpg">
+                        <a href="javascript:;">
+                            <img src="./image/首页/抗肿瘤注射液.jpg">
+                        </a>
                         <p>
                             <span>抗肿瘤注射液</span><br>
                             <i></i><br>
@@ -429,7 +459,9 @@
                         </p>
                     </div>
                     <div class="cont">
-                        <img src="./image/首页/食品配料.jpg">
+                        <a href="javascript:;">
+                            <img src="./image/首页/食品配料.jpg">
+                        </a>
                         <p>
                             <span>食品配料</span><br>
                             <i></i><br>
@@ -437,7 +469,9 @@
                         </p>
                     </div>
                     <div class="cont">
-                        <img src="./image/首页/清洁用品.jpg">
+                        <a href="javascript:;">
+                            <img src="./image/首页/清洁用品.jpg">
+                        </a>
                         <p>
                             <span>清洁用品</span><br>
                             <i></i><br>
@@ -445,14 +479,16 @@
                         </p>
                     </div>
                     <div class="cont">
-                        <img src="./image/首页/抗肿瘤注射液-1.jpg">
+                        <a href="javascript:;">
+                            <img src="./image/首页/抗肿瘤注射液-1.jpg">
+                        </a>
                         <p>
                             <span>抗肿瘤注射液</span><br>
                             <i></i><br>
                             <small>生物&医药</small>
                         </p>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -462,27 +498,21 @@
         <div class="newsDetail">
             <div class="title">
                 <h4>CFDA最新发布！升级落地的数据保护制度助力国产创新药</h4>
-                <p>原创： 小药丸 CPhI制药在线 4月27日	</p>
+                <p>原创： 小药丸 CPhI制药在线 4月27日 </p>
             </div>
             <p>4月26日，CFDA办公室公开征求《药品试验数据保护实施办法（暂行）》意见。《办法》出台的目的在于完善和落实药品试验数据保护制度，促进药品创新，提高我国创新药物的可及性，满足临床用药需求。
-                </p>
+            </p>
             <h5>数据保护制度--与专利制度平行的知识产权保护制度</h5>
             <p>作为与药品专利制度平行的知识产权保护制度，数据保护并不会延长药品的专利保护期限，这种保护制度能够为没有专利保护或专利保护不足的药品提供最基本的市场保护，尤其是对于新研发的创新药物，最终目的在于激励制药企业的创新活动。
-                </p>
-                <img src="./image/汉邦资讯/分组.png">
-                <p>早在1984年，Hatch-Waxman法案对新化学实体给与了5年的数据保护期，美国由此成为了全球首个设立药品数据保护制度的国家。
-       
-                        目前，美国的数据保护制度已经发展得较为完善。首先，FDA对数据保护的范围做出了清楚的界定且覆盖范围广，新型化学药品、治疗用生物制品以及具有新适应症的药品都适用于数据保护；其次，在保护方式上，FDA采取了"不受理、不批准"的模式，即处于数据保护期内的仿制药申请将不被受理或者是在受理后不被批准，通过这种模式FDA授予了享有数据保护资格药品的市场独占权。与美国相同，欧盟的数据保护制度也采取了这种保护方式。
-                        </p>
-                <h5>升级落地 助力国产创新药</h5>
-                <p>作为加入WTO进程的一部分，我国于2002年颁布《药品管理法实施条例》时正式引入了数据保护制度。以此为依据，2007年，修订的《药品注册管理办法》对数据保护的保护期限和保护条件进行了法规上的明确，后来逐步发展演化，曾经历过药品行政保护、新药保护等特定的数据保护时期。
-       
-                        然而，此前法规中关于数据保护制度的设定在实际操作过程中存在着诸多问题，法规基本停留在理论层面，在具体的执行过程中并没有达到应有的效果。
-                               
-                        这些问题主要表现为数据保护适用范围定义不清晰且过于狭窄、保护方式缺乏可操作的机制等方面，诸如给与6年试验数据保护的对象描述为"含有新型化学成分"的药品，本身模糊，且在当前越来越重要的生物药并没有被包括在内。
-                               
-                        2017年，CFDA发布了《关于鼓励药品医疗器械创新保护创新者权益的相关政策（征求意见稿）》，意见稿的内容之一就是明确要完善数据保护制度，对创新药、罕见病用药以及儿童用药等多种情况分别给与不同的保护期限，旧有法规中存在的问题正在逐步完善。
-                        </p>
+            </p>
+            <img src="./image/汉邦资讯/分组.png">
+            <p>早在1984年，Hatch-Waxman法案对新化学实体给与了5年的数据保护期，美国由此成为了全球首个设立药品数据保护制度的国家。         目前，美国的数据保护制度已经发展得较为完善。首先，FDA对数据保护的范围做出了清楚的界定且覆盖范围广，新型化学药品、治疗用生物制品以及具有新适应症的药品都适用于数据保护；其次，在保护方式上，FDA采取了"不受理、不批准"的模式，即处于数据保护期内的仿制药申请将不被受理或者是在受理后不被批准，通过这种模式FDA授予了享有数据保护资格药品的市场独占权。与美国相同，欧盟的数据保护制度也采取了这种保护方式。
+            </p>
+            <h5>升级落地 助力国产创新药</h5>
+            <p>作为加入WTO进程的一部分，我国于2002年颁布《药品管理法实施条例》时正式引入了数据保护制度。以此为依据，2007年，修订的《药品注册管理办法》对数据保护的保护期限和保护条件进行了法规上的明确，后来逐步发展演化，曾经历过药品行政保护、新药保护等特定的数据保护时期。
+                        然而，此前法规中关于数据保护制度的设定在实际操作过程中存在着诸多问题，法规基本停留在理论层面，在具体的执行过程中并没有达到应有的效果。         这些问题主要表现为数据保护适用范围定义不清晰且过于狭窄、保护方式缺乏可操作的机制等方面，诸如给与6年试验数据保护的对象描述为"含有新型化学成分"的药品，本身模糊，且在当前越来越重要的生物药并没有被包括在内。
+                        2017年，CFDA发布了《关于鼓励药品医疗器械创新保护创新者权益的相关政策（征求意见稿）》，意见稿的内容之一就是明确要完善数据保护制度，对创新药、罕见病用药以及儿童用药等多种情况分别给与不同的保护期限，旧有法规中存在的问题正在逐步完善。
+            </p>
         </div>
     </script>
     <!-- 产品中心详情模板 -->
@@ -492,7 +522,7 @@
             <p>CS-Prep工业制备高效液相色谱系统由输液部分、进样部分、检测部分、馏分搜集部分、控制和数据处理部分组成。设备整体设计符合GMP、cGMP及FDA等相关法规要求，集成化模块设计，可以实现平衡、上样、冲洗、自动收集、在线清洗（CIP）等工艺过程，稳定可靠，可提供符合GMP等相关法规要求的验证文件。</p>
             <p>CS-Prep工业制备高效液相色谱系统作为一种工业化的分离纯化设备，具有高效、快速、自动化程度高、防爆等特点，广泛用于医药中间体、生物医药、合成药物、天然产物、精细化工、食品添加剂等领域的分离纯化，可有效提升生成效率、自动化程度及产品的纯度与得率。</p>
             <div class="image">
-                <img src="./image/产品中心/液相色谱系统/工业制备液相色谱系统/CS-Prep工业制备液相.jpg"> 
+                <img src="./image/产品中心/液相色谱系统/工业制备液相色谱系统/CS-Prep工业制备液相.jpg">
             </div>
             <h4 class="red">产品特点</h4>
             <ul>
@@ -504,7 +534,7 @@
             </ul>
             <h4>标准的梯度系统P&ID图</h4>
             <div class="image">
-                <img src="./image/产品中心/液相色谱系统/工业制备液相色谱系统/CS-Prep工业制备液相.jpg"> 
+                <img src="./image/产品中心/液相色谱系统/工业制备液相色谱系统/CS-Prep工业制备液相.jpg">
             </div>
             <p>注：AV0101-AV0104气动两通球阀，FCV0101~FCV0102流量调节阀，FIT0101~FIT0102质量流量计，CV0101~CV0103单向阀，SM0101静态混合器，AV0105~AV0118气动三通球阀，P0101~P0102输液隔膜泵，P0101~P0102输液隔膜泵，PT0101~PT0105压力变送器，M0101~M0103在线过滤器，UV0101紫外检测器，AV0119~AV0126气动两通球阀，MV0101~MAV0102手动三通球阀</p>
         </div>
@@ -514,6 +544,7 @@
     <script src="./js/slides.js"></script>
     <script src="./js/page.js"></script>
     <script src="./js/menu.js"></script>
+    <script src="./js/swiper.min.js"></script>
     <script src="./js/index.js"></script>
 </body>
 
