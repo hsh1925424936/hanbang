@@ -2,9 +2,14 @@ $(function(){
     var app = {
         // 程序初始化调用
         init:function(){
+            window.onresize = function(){
+                var docEl = docment.documentElement;
+
+            }
             this.events();
             // 初始化的时候选中首页
             $('.nav-tab .coption').eq(0).click();
+
         },
         // 事件绑定
         events:function(){
