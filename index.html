@@ -204,12 +204,7 @@
             <div class="footer-logo">
                 <img src="./image/首页/footer-logo.png" alt="">
             </div>
-            <div class="footer-common">
-                <div class="footer-common-gz">
-                    <img src="./image/首页/公众号二维码.jpg" alt="">
-                </div>
-                <span>汉邦微信公众号</span>
-            </div>
+           
             <div class="footer-tab">
                 <ul>
                     <li>
@@ -242,6 +237,12 @@
                         </ol>
                     </li>
                 </ul>
+            </div>
+            <div class="footer-common">
+                <div class="footer-common-gz">
+                    <img src="./image/首页/公众号二维码.jpg" alt="">
+                </div>
+                <span>汉邦微信公众号</span>
             </div>
         </div>
         <div class="footer-ft">
@@ -549,20 +550,4 @@
     <script src="./js/swiper.min.js"></script>
     <script src="./js/index.js"></script>
 </body>
-<script>
-(function(doc, win) {  
-    var docEl = doc.documentElement,  
-    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',  
-    recalc = function() {  
-    var clientWidth = docEl.clientWidth;  
-        if (!clientWidth) return;  
-        docEl.style.fontSize = (clientWidth / 12) + 'px';  
-        if(clientWidth>1200) docEl.style.fontSize = '100px';
-        if(clientWidth<360) docEl.style.fontSize = '30px';
-    };  
-    if (!doc.addEventListener) return;  
-    win.addEventListener(resizeEvt, recalc, false);  
-    doc.addEventListener('DOMContentLoaded', recalc, false);  
-}(document, window)); 
-</script>
 </html>

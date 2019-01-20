@@ -1,4 +1,19 @@
+(function(doc, win) {  
+    var docEl = doc.documentElement,  
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',  
+    recalc = function() {  
+    var clientWidth = docEl.clientWidth;  
+        if (!clientWidth) return;  
+        docEl.style.fontSize = (clientWidth / 12) + 'px';  
+        if(clientWidth>1200) docEl.style.fontSize = '100px';
+        if(clientWidth<360) docEl.style.fontSize = '30px';
+    };  
+    if (!doc.addEventListener) return;  
+    win.addEventListener(resizeEvt, recalc, false);  
+    doc.addEventListener('DOMContentLoaded', recalc, false);  
+}(document, window));
 $(function(){
+    
     var app = {
         // 程序初始化调用
         init:function(){
