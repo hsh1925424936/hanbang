@@ -4,6 +4,7 @@ html,body{
     height: 100%;
     overflow-x: hidden;
     overflow-y:auto;
+    font-size:100px;
     font-family:PingFangSC-Regular;
     background-color: #fff;
     position: relative;
@@ -25,9 +26,8 @@ ul,ol{
     clear:both;
 }
 
-.center{
-    width: 12rem;
-    margin:0 auto;
+.case{
+    padding-bottom: .2rem;
 }
 
 /* nav导航样式 */
@@ -46,17 +46,21 @@ ul,ol{
     width: 12rem;
     height: 100%;
     margin:0 auto;
+    padding:0 .1rem;
 }
 
 .nav-logo{
     float:left;
     width: 1.49rem;
     height: .47rem;
-    /* border: solid 1px red; */
     margin-top:.11rem;
+    position: relative;
 }
 
 .nav-logo img{
+    position: absolute;
+    top:0;
+    left: 0;
     width: 100%;
     height: 100%;
 }
@@ -82,6 +86,9 @@ ul,ol{
     float:left;
     cursor: pointer;
     margin:0 .15rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .coption:hover{
@@ -89,7 +96,7 @@ ul,ol{
 }
 
 .search{
-    width: .95rem;
+    /* width: .95rem; */
     height: calc(100% - .04rem);
     float: right;
     display:flex;
@@ -171,8 +178,8 @@ ul,ol{
 .main-cont{
     width: 12rem;
     margin:0 auto;
-    padding-top:.2rem;
-    
+    font-size: .16rem;
+    padding:.2rem .1rem 0;
 }
 .main-left{
     width: 2.4rem;
@@ -224,15 +231,21 @@ ul,ol{
 
 .main-left ul li span{
     float:left;
+    font-size:.16rem;
+    display: block;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .main-left ul li i{
-    display:inline-block;
+    display:block;
     width: .08rem;
     height: .12rem;
-    float: right;
     background: url('../image/走进汉邦/箭头-未选中.png') no-repeat center center;
     margin-top:.14rem;
+    float: right;
 }
 
 .main-left ul li:hover{
@@ -264,6 +277,7 @@ ul,ol{
     text-align: right;
     padding-bottom: .12rem;
     margin-bottom:.01rem;
+    font-size: 0.16rem;
 }
 /* 职位详情 */
 .contactDetail{
@@ -276,11 +290,12 @@ ul,ol{
     z-index: 100000;
     display:none;
     overflow: auto;
+    font-size: .16rem;
 }
 
 .contactDetail .content{
     width: 7.2rem;
-    height: 6.85rem;
+    height:70%;
     background: #fff;
     position: absolute;
     top:1.2rem;
@@ -313,7 +328,7 @@ ul,ol{
 
 .contactDetail .content .cont{
     width: 100%;
-    height: 4.7rem;
+    height:calc(100% - 2.15rem);
     margin-top:1.43rem;
     overflow-y:auto;
     overflow-x:hidden;
@@ -389,33 +404,43 @@ ul,ol{
 
 .footer-content{
     width: 12rem;
-    height: 2.62rem;
-    padding-top: .5rem;
+    /* height: 2.62rem; */
+    padding:.5rem 0; 
     margin:0 auto;
 }
 
 .footer-logo{
+    position: relative;
     width: 2.15rem;
     height: .69rem;
     /* border:solid 1px red; */
-    margin-right: 1.6rem;
+    /* margin-right: 1.6rem; */
     float:left;
 }
-
+.footer-logo img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 .footer-tab{
-    float:left;
+    float:right;
 }
 
 .footer-tab ul li{
-    float:left;
+    float: left;
     width: .8rem;
+    min-width: 36px;
     margin-right: .5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .footer-tab ul li span{
     font-size:.18rem;
     font-weight: bolder;
     margin-bottom: .05rem;
+    display:block;
 }
 
 .footer-tab ul li ol li{
@@ -424,36 +449,42 @@ ul,ol{
 }
 
 .footer-common{
-    float:left;
+    float:right;
 }
 
 .footer-common .footer-common-gz{
     width: 1.2rem;
     height: 1.2rem;
 }
-
+.footer-common .footer-common-gz img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 .footer-common span{
-    display: inline-block;
+    display: block;
     width: 1.2rem;
     text-align: center;
+    font-size: .16rem;
 }
 
 .footer-ft{
     width: 100%;
-    height: .96rem;
+    /* height: .96rem; */
     /* line-height: 40px; */
     background-color:#292929;
     color: #fff;
     overflow: hidden;
+    padding: .1rem 0;
 }
 
 .footer-ft .footer-p{
     width: 12rem;
     /* height: 100%; */
-    height: .2rem;
-    line-height: .2rem;
+    /* height: .2rem; */
+    /* line-height: .2rem; */
     font-size:.14rem;
-    margin:.16rem auto;
+    margin:0 auto;
     text-align: center;
     letter-spacing: 0;
 }

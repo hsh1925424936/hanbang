@@ -1,0 +1,70 @@
+@media screen and (max-width:767px){
+    .news .content .big{
+        width: 100%;
+    }
+    .news .content .small{
+        width: 49%;
+        margin-left: 0;
+    }
+    .news .content .module:nth-of-type(2n){
+        margin-right:2%;
+    }
+    .news .content .module .brief h4{
+        width: calc(100% - 37px);
+        margin-left: 5px;
+    }
+    .news .content .module .brief p{
+        width: 32px;
+        height: 32px;
+    }
+    .news .content .module .brief p span:nth-of-type(1){
+        font-size: 16px;
+        top:6px;
+        transform: translateX(-50%);
+    }
+    .news .content .module .brief p span:nth-of-type(2){
+        font-size: 12px;
+        bottom: 6px;
+    }
+    .main-left ul li{
+        height: 30px;
+        line-height: 30px;
+    }
+    .main-left ul li i{
+        width: 5px;
+        height: 7px;
+        margin-top:12px;
+    }
+    .hydt .content li .cont p{
+        line-height: none;
+    }
+    .hydt .content li .time{
+        width:32px;
+        height: 32px;
+        margin-right: 10px;
+    }
+    .hydt .content li .cont{
+        width: calc(100% - 42px);
+    }
+    .yxsp .content .tab li{
+        width:100px;
+        height: 20px;
+        line-height: 20px;
+    }
+    .yxsp .content .tab li.active:after{
+        border-width: 3px 3px 0;
+        bottom: -3px;
+    }
+    .contactDetail .content .title{
+        height: 75px;
+
+    }
+    .contactDetail .content .cont{
+        height: calc(100% - 75px);
+        margin-top:75px;
+        padding-bottom: 40px;
+    }
+    .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{
+        bottom: -20px;
+    }
+}

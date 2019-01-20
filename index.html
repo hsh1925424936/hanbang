@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="./css/menu.css">
     <!--swiper-->
     <link rel="stylesheet" href="./css/swiper.css">
+    <!-- 媒体查询 -->
+    <link rel="stylesheet" href="./css/media.css">
 </head>
 
 <body>
@@ -198,9 +200,15 @@
     </main>
 
     <footer class="footer-container">
-        <div class="footer-content">
+        <div class="footer-content clearfix">
             <div class="footer-logo">
                 <img src="./image/首页/footer-logo.png" alt="">
+            </div>
+            <div class="footer-common">
+                <div class="footer-common-gz">
+                    <img src="./image/首页/公众号二维码.jpg" alt="">
+                </div>
+                <span>汉邦微信公众号</span>
             </div>
             <div class="footer-tab">
                 <ul>
@@ -234,12 +242,6 @@
                         </ol>
                     </li>
                 </ul>
-            </div>
-            <div class="footer-common">
-                <div class="footer-common-gz">
-                    <img src="./image/首页/公众号二维码.jpg" alt="">
-                </div>
-                <span>汉邦微信公众号</span>
             </div>
         </div>
         <div class="footer-ft">
@@ -556,7 +558,7 @@
         if (!clientWidth) return;  
         docEl.style.fontSize = (clientWidth / 12) + 'px';  
         if(clientWidth>1200) docEl.style.fontSize = '100px';
-        if(clientWidth<320) docEl.style.fontSize = '16px';
+        if(clientWidth<360) docEl.style.fontSize = '30px';
     };  
     if (!doc.addEventListener) return;  
     win.addEventListener(resizeEvt, recalc, false);  

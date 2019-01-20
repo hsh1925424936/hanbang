@@ -2,14 +2,9 @@ $(function(){
     var app = {
         // 程序初始化调用
         init:function(){
-            window.onresize = function(){
-                var docEl = docment.documentElement;
-
-            }
             this.events();
             // 初始化的时候选中首页
             $('.nav-tab .coption').eq(0).click();
-
         },
         // 事件绑定
         events:function(){
@@ -224,7 +219,7 @@ $(function(){
             $('.main-container').html(Handlebars.compile($('#homePage').html()));
             // 两个轮播图
             var swiper = new Swiper('.swiper-container', {
-                autoplay:true,
+                autoplay:false,
                 delay:3000,
                 pagination: {
                     el: '.swiper-pagination',
