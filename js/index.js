@@ -9,6 +9,9 @@ $(function(){
         // 事件绑定
         events:function(){
             var self = this;
+            $(document).on('click','.search .navbar-toggle',function(event){
+                $('.nav-tab').toggleClass('autoNone');
+            })
             // nav导航hover事件
             $('.nav-tab .coption').mouseover(function(event){
                 var name = $(this).find('.title').text();
@@ -169,6 +172,8 @@ $(function(){
                         self.renderMainLeftTab(commonData.mainLeftList);
                         break; 
                 }
+                $('.nav-tab').toggleClass('autoNone');
+                
             })
             // 页面中部左侧的tab切换事件
             $(document).on('click','.main-container .main-left li',function(event){

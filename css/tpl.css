@@ -64,7 +64,7 @@
 }
 .gyhb .brief{
     width:100%;
-    height: 163px;
+    /*height: 163px;*/
     padding:24px;
     background: #F5F5F5;
     margin-bottom: 126px;
@@ -144,11 +144,14 @@
 /* 走进汉邦-汉邦理念（新） */
 .hbln{
     width: 100%;
-    height:600px;
+    /* height: 600px; */
     margin-bottom: 42px;
-    background: url('../image/走进汉邦/关于汉邦.jpg') no-repeat;
+    /* background: url(../image/走进汉邦/关于汉邦.jpg) no-repeat; */
     background-size: 100% 100%;
-    padding: 20px;
+    /* padding: 20px; */
+}
+.hbln img {
+    max-width:100%;
 }
 .hbln .center{
     width:100%;
@@ -310,6 +313,9 @@
 .fzlc .img .title i{
     background: #E9222A;
 }
+.fzlc img{
+    max-width:100%;
+}
 
 /* 汉邦资讯-汉邦动态 */
 .hbdt .image{
@@ -336,6 +342,10 @@
     width: 192px;
     height: 100%;
     background: #ccc;
+}
+.hbdt ul.content li img[src=""],
+.hbdt ul.content li img:not([src]) {
+    opacity:0;
 }
 .hbdt ul.content li .cont{
     float: left;
@@ -450,8 +460,9 @@
 }
 /* 汉邦资讯-行业动态-详情 */
 .newsDetail{
-    text-align: center;
+    /*text-align: center;*/
     margin-bottom: 84px;
+    word-break: break-all;
 }
 .newsDetail .title h4{
     font-family: PingFangSC-Semibold;
@@ -466,7 +477,7 @@
     font-size: 14px;
     color: #666666;
     line-height: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     text-align:left;
 }
 .newsDetail>h5{
@@ -568,13 +579,14 @@
     height: 280px;
     margin-bottom: 16px;
     cursor:pointer;
+    border: 1px solid transparent;
 }
 .yxsp .content .cont ul li:not(:nth-child(3n)){
     margin-right: 13px;
 }
 .yxsp .content .cont ul li img{
     width: 100%;
-    height: 240px;
+    height: 236px;
 }
 .yxsp .content .cont ul li p{
     width: 100%;
@@ -591,6 +603,9 @@
 .yxsp .content .cont ul li:hover p{
     background:#E9222A;
     color:#fff;
+}
+.yxsp .content .cont ul li a{
+    text-decoration: none;
 }
 .yxsp .content .cont .hide{
     display:none;

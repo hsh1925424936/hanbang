@@ -1,0 +1,137 @@
+.nav-container .search{
+    display: none;
+}
+.swiper-container{
+    height: auto;
+}
+@media screen and (min-width:992px) and (max-width:1220px){
+    .nav-content{
+        width: 992px;
+        margin:0 auto;
+    }
+    .nav-content .coption{
+        width: 89px;
+    }
+    .nav-content{
+        width:auto;
+        max-width:1200px;
+    }
+    .main-cont {
+        width:auto;
+        max-width: 1200px;
+    }
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    .nav-content{
+        width: 768px;
+        margin:0 auto;
+    }
+    .nav-content .coption{
+        width: 60px;
+        font-size: 15px;
+    }
+    .main-cont{
+        width: 100%;
+        padding: 0 10px;
+    }
+    .main-left {
+        float: none;
+        width:100%;
+    }
+    .main-right {
+        width: 100%;
+        float: none;
+    }
+
+}
+@media screen and (min-width:360px) and (max-width:767px){
+    .nav-container .search{
+        display: block;
+        position: absolute;
+        top:0;
+        right: 0;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+    }
+    .nav-tab{
+        position: absolute;
+        float: none;
+        width: 100%;
+        height: auto;
+        top: 70px;
+        background: #fff;
+        display:block;
+    }
+    .autoNone{
+        display: none;
+    }
+    .nav-tab li{
+        width:100%;
+        margin: 0;
+    }
+    .nav-container .search .navbar-toggle{
+        position: relative;
+        float: right;
+        background-color: transparent;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        margin-right: 0px;
+        color: #333;
+        margin-left: 5px;
+        margin-top: 10px;
+    }
+    .navbar-toggle .icon-bar{
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: #333;
+        margin-bottom: 3px;
+    }
+    .main-cont{
+        width: 100%;
+        padding:0 10px; 
+    }
+    .main-left {
+        float: none;
+        width:100%;
+    }
+    .main-right {
+        width: 100%;
+        float: none;
+    }
+    .home-cont{
+        margin-top:10px;
+    }
+    .home-cont .title{
+        height: 30px;
+    }
+    .home-cont .title h3{
+        font-size: 16px;
+    }
+    .center{
+        width: 100%;
+    }
+    .home-cont .title .more span{
+        position: relative;
+        top:-8px;
+    }
+    .home-cont .title .more i{
+        top:0;
+    }
+    .news .content .module{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .news .content .module>a img{
+        width: 100%;
+    }
+    .news .content .module .brief h4{
+        font-size: 16px;
+        font-weight: normal;
+        margin-top:4px;
+    }
+}

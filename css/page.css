@@ -1,31 +1,45 @@
-.page{
+.pagination {
     list-style: none;
     float: right;
     margin-top:24px;
     margin-bottom: 75px;
 }
-.page>li{
+.pagination > li {
     float: left;
-    padding: 5px 10px;
+    /*padding: 5px 10px;*/
     cursor: pointer;
 }
-.page .pageItem{
+.pagination > li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    display: block;
+}
+.pagination > li.active a,
+.pagination > li:hover a {
+    color: #FFF;
+}
+.pagination li {
     border: solid thin #DDDDDD;
     margin: 5px;
 }
-.page .pageItemActive{
+.pagination li.active {
     border: solid thin #E9222A;
     margin: 5px;
     background-color: #E9222A;
     color:white;
 }
-.page .pageItem:hover{
+.pagination li:hover {
     border: solid thin #E9222A;
     background-color: #E9222A;
     color:white;
 }
-.page .pageItemDisable{
+.pagination li.disabled {
     border: solid thin #DDDDDD;
     margin: 5px;
     background-color: #DDDDDD;
+    color: #999;
+}
+.pagination li.disabled a {
+    color: #999;
 }

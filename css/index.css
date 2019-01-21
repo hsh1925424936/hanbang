@@ -14,7 +14,9 @@ html,body{
     margin:0;
     box-sizing: border-box;
 }
-
+a {
+    transition: all .2s linear;
+}
 ul,ol{
     list-style: none;
 }
@@ -81,8 +83,15 @@ ul,ol{
     float:left;
     cursor: pointer;
     margin:0 15px;
+    color: #000;
+    text-decoration: none;
 }
-
+.coption.selected{
+    border-bottom: solid 4px #E9222A;
+    color: #E9222A;
+    background-color: #F6F6F6;
+    font-weight:600;
+}
 .coption:hover{
     color: #E9222A;
 }
@@ -98,7 +107,10 @@ ul,ol{
     position: relative;
     top:4px;
 }
-
+.search a {
+    color: #333;
+    text-decoration: none;
+}
 .search i{
     display:inline-block;
     width: 18px;
@@ -170,7 +182,7 @@ ul,ol{
     width: 1200px;
     margin:0 auto;
     padding-top:20px;
-    
+
 }
 .main-left{
     width: 240px;
@@ -206,11 +218,14 @@ ul,ol{
     bottom: 10px;
     right: 10px;
 }
-.main-left ul{
+.main-left ul,
+.main-left .ul {
     width: 100%;
 }
 
-.main-left ul li{
+.main-left ul li,
+.main-left .ul .li {
+    display: block;
     width: 100%;
     height: 40px;
     line-height: 40px;
@@ -218,13 +233,16 @@ ul,ol{
     cursor: pointer;
     background: #F5F5F5;
     margin-bottom: 10px;
+    color: #333;
 }
 
-.main-left ul li span{
+.main-left ul li span,
+.main-left .ul .li span {
     float:left;
 }
 
-.main-left ul li i{
+.main-left ul li i,
+.main-left .ul .li i {
     display:inline-block;
     width: 8px;
     height: 12px;
@@ -233,21 +251,25 @@ ul,ol{
     margin-top:14px;
 }
 
-.main-left ul li:hover{
+.main-left ul li:hover,
+.main-left .ul .li:hover {
     background: #E9222A;
     color: #fff;
 }
 
-.main-left ul li:hover i{
+.main-left ul li:hover i,
+.main-left .ul .li:hover i {
     background: url('../image/走进汉邦/箭头-选中.png') no-repeat center center;
 }
 
-.main-left ul .selected{
+.main-left ul .selected,
+.main-left .ul .selected {
     background: #E9222A;
     color:#fff;
 }
 
-.main-left ul .selected i{
+.main-left ul .selected i,
+.main-left .ul .selected i {
     background: url('../image/走进汉邦/箭头-选中.png') no-repeat center center;
 }
 
@@ -351,7 +373,7 @@ ul,ol{
 /* 产品中心-详情 */
 
 .productDetail h2{
-    padding: 45px 0 68px 0;
+    padding: 25px 0 38px 0;
 }
 
 .productDetail p{
@@ -419,6 +441,10 @@ ul,ol{
 .footer-tab ul li ol li{
     font-size:14px;
     margin-top:10px;
+}
+.footer-tab a {
+    text-decoration: none;
+    color: #444;
 }
 
 .footer-common{
